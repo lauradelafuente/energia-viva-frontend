@@ -7,13 +7,13 @@ import './Login.css';
 function Login() {
   return (
     <>
-      <Grid
+      <Grid style={{backgroundColor: "#fff59d"}}
         container
         direction="row"
         alignItems="center"
         justifyContent="center"
       >
-        <Grid item xs={6} alignItems="center" justifyContent="center">
+        <Grid item xs={6} alignItems="center" justifyContent="center" >
           <Box paddingX={20}>
             <form>
               <Typography variant="h2" align='center'>Entrar</Typography>

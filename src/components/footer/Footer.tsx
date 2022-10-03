@@ -53,7 +53,7 @@ function Footer() {
               </a>
             </Box>
           </Box>
-          <Box style={{ backgroundColor: '#303F9F', height: '60px' }}>
+          <Box style={{ backgroundColor: 'black', height: '60px' }}>
             <Box paddingTop={1}>
               <Typography
                 variant="subtitle2"

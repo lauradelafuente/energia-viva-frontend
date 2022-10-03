@@ -7,46 +7,60 @@ function Navbar() {
   return (
     <>
       <AppBar position="static">
-        <Toolbar variant="dense">
+        <Toolbar variant="dense" className='navbar'>
           <Box className="cursor">
-            <Typography variant="h5" color="inherit">
-              BlogPessoal
-            </Typography>
+            <img src="https://o.remove.bg/downloads/025981c1-1e89-4fcb-88af-731636f3f058/ENERGIA_VIVA-removebg-preview.png" alt="" className='logo'/>
           </Box>
 
-          <Grid container justifyContent="flex-end">
-            <Box display="flex" justifyContent="start">
-              <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
+          <Grid container justifyContent="flex">
+            <Box display="flex" justifyContent="start" >
+            <Link to='/home' className='sublinhado'>
+              <Box mx={1} className="cursor fonte">
+                <Typography variant="h6" color="inherit" fontFamily='Bangers cursive'>
                   Home
                 </Typography>
               </Box>
+              </Link>
 
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
-                  Postagens
+                <Typography variant="h6" color="inherit" fontFamily='Bangers cursive'>
+                  Categorias
                 </Typography>
               </Box>
 
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
-                  Temas
+                <Typography variant="h6" color="inherit" fontFamily='Bangers cursive'>
+                  Promoções
                 </Typography>
               </Box>
 
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
-                  Cadastrar Temas
+                <Typography variant="h6" color="inherit" fontFamily='Bangers cursive'>
+                  Sobre nós
                 </Typography>
               </Box>
 
-                <Link to='/login' className='logout'>
-                  <Box mx={1} className="cursor">
-                      <Typography variant="h6" color="inherit">
-                        Logout
+              <Link to='/login' className='sublinhado'>
+              <Box mx={1} className="cursor">
+                <Typography variant="h6" color="inherit" fontFamily='Bangers cursive'>
+                  Login
+                </Typography>
+              </Box>
+              </Link>
+
+              <a href="https://www.instagram.com/generationbrasil/?hl=pt-br" className='sublinhado'>
+              <Box mx={1} className="cursor">
+                <Typography variant="h6" color="inherit" fontFamily='Bangers cursive'>
+                  Instagram
+                </Typography>
+              </Box>
+              </a>
+              
+                  <Box mx={1} className="cursor" >
+                      <Typography variant="h6" color="inherit" fontFamily='Bangers cursive'>
+                        Carrinho
                       </Typography>
                   </Box>
-                </Link>
             </Box>
           </Grid>
         </Toolbar>

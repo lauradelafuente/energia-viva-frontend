@@ -1,4 +1,17 @@
-.logout {
+
+.sublinhado {
     text-decoration: none;
-    color: #fff;
+    color: rgb(255, 217, 0);
+  }
+  .cursor{
+    color: #ffd740;
+    font-family: 'Bangers', cursive;
+    
+  }
+  .navbar{
+    background-color: #000000;
+  }
+  .logo{
+    width:100px;
+    height:100px;
   }
