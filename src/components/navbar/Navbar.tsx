@@ -52,7 +52,7 @@ function Navbar() {
                 </Typography>
               </Box>
 
-              <Box mx={1} className="cursor" marginLeft={85}>
+              <Box mx={1} className="cursor" marginLeft= "135vh">
                 <Typography
                   variant="h6"
                   color="inherit"
