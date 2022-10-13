@@ -1,90 +1,158 @@
-import { Typography, Button } from '@material-ui/core';
-import { Box, Grid, TextField } from '@mui/material';
-import React, { ChangeEvent, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
-import UserLogin from '../../models/UserLogin';
-import { login } from '../../service/Service';
-import { addToken } from '../../store/tokens/actions';
-import './Login.css';
+import { Typography, Button } from "@material-ui/core";
+import { Box, Grid, TextField } from "@mui/material";
+import React, { ChangeEvent, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import UserLogin from "../../models/UserLogin";
+import { login } from "../../service/Service";
+import { addToken } from "../../store/tokens/actions";
+import "./Login.css";
 
 function Login() {
-  const dispatch = useDispatch(); 
   let navigate = useNavigate();
-  const [token, setToken] = useState('');
-  const [userLogin, setUserLogin] = useState<UserLogin>(
-    {
-      id: 0,
-      nome: "",
-      usuario: "",
-      foto: "",
-      senha: "",
-      cpf: "",
-      endereco: "",
-      token: ""
-    }
-  )
+  const dispatch = useDispatch();
+  const [token, setToken] = useState("");
 
-  function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+  const [userLogin, setUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: "",
+    usuario: "",
+    foto: "",
+    senha: "",
+    cpf: "",
+    endereco: "",
+    token: "",
+  });
 
+  const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: "",
+    usuario: "",
+    foto: "",
+    senha: "",
+    cpf: "",
+    endereco: "",
+    token: "",
+  });
+
+  function updateModel(event: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
       ...userLogin,
-      [e.target.name]: e.target.value
-    })
+      [event.target.name]: event.target.value,
+    });
   }
 
   useEffect(() => {
-    if (token !== '') {
-      dispatch(addToken(token));
-      navigate('/home')
+    if (
+      userLogin.usuario !== "" &&
+      userLogin.senha !== "" &&
+      userLogin.senha.length >= 8
+    ) {
+      setForm(true);
     }
-  }, [token])
+  }, [userLogin]);
 
-  async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault();
+  const [form, setForm] = useState(false);
+
+  async function conectar(event: ChangeEvent<HTMLFormElement>) {
+    event.preventDefault();
     try {
-      await login(`/usuarios/logar`, userLogin, setToken)
-
-
-      alert('Usuário logado com sucesso!');
+      await login("usuarios/logar", userLogin, setRespUserLogin);
+      toast.success("Usuario conectado. tamo juntão", {
+        theme: "colored",
+        autoClose: 2000,
+        hideProgressBar: true,
+      });
     } catch (error) {
-      alert('Dados do usuário inconsistentes. Erro ao logar!');
+      toast.error(`Deu ruim.`, {
+        theme: "colored",
+        autoClose: 2000,
+        hideProgressBar: true,
+      });
     }
   }
 
+  useEffect(() => {
+    if (token !== "") {
+      dispatch(addToken(token));
+      navigate("/home");
+    }
+  }, [token]);
+
+  //metodo para pegar o token e o id do json e guardar no redux
+  useEffect(() => {
+    if (respUserLogin.token !== "") {
+      dispatch(addToken(respUserLogin.token));
+      navigate("/home");
+    }
+  }, [respUserLogin.token]);
+
   return (
     <>
-      <Grid style={{ backgroundColor: "#fff59d" }}
+      <Grid
+        style={{ backgroundColor: "#fff59d" }}
         container
         direction="row"
         alignItems="center"
         justifyContent="center"
       >
-        <Grid item xs={6} alignItems="center" justifyContent="center" >
+        <Grid item xs={6} alignItems="center" justifyContent="center">
           <Box paddingX={20}>
-            <form onSubmit={onSubmit} >
-              <Typography variant="h2" align='center'>Entrar</Typography>
+            <form onSubmit={conectar}>
+              <Typography variant="h2" align="center">
+                Entrar
+              </Typography>
 
-              <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
+              <TextField
+                value={userLogin.usuario}
+                onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                  updateModel(event)
+                }
+                id="usuario"
+                label="usuário"
+                variant="outlined"
+                name="usuario"
+                margin="normal"
+                fullWidth
+              />
 
-              <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+              <TextField
+                value={userLogin.senha}
+                onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                  updateModel(event)
+                }
+                id="senha"
+                label="senha"
+                variant="outlined"
+                name="senha"
+                margin="normal"
+                type="password"
+                fullWidth
+              />
 
-              <Box display='flex' justifyContent='center' marginTop={2}>
-
-                <Button type="submit" variant="contained" color="primary">
+              <Box display="flex" justifyContent="center" marginTop={2}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  disabled={!form}
+                >
                   Entrar
                 </Button>
-
               </Box>
             </form>
 
-            <Box display="flex" justifyContent='center' marginTop={2}>
+            <Box display="flex" justifyContent="center" marginTop={2}>
               <Box marginRight={1}>
-                <Typography variant='subtitle1'>Ainda não tem uma conta?</Typography>
+                <Typography variant="subtitle1">
+                  Ainda não tem uma conta?
+                </Typography>
               </Box>
-              <Link to='/cadastro'>
-                <Typography variant='subtitle1' align='center'>Cadastre-se</Typography>
+              <Link to="/cadastro">
+                <Typography variant="subtitle1" align="center">
+                  Cadastre-se
+                </Typography>
               </Link>
             </Box>
           </Box>
