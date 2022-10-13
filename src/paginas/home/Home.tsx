@@ -1,11 +1,23 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { TokenState } from '../../store/tokens/tokensReducer';
 import './Home.css';
 
-// import purple from '@material-ui/core/colors/purple';
-
-// const roxin = purple[500]
-
 function Home() {
+  let navigate = useNavigate();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
+  useEffect(() => {
+    if (token == "") {
+      alert("Você precisa estar logado");
+      navigate("/login");
+    }
+  }, [token]);
+  
   return (
     <>
       <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#fff59d" }}>
