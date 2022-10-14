@@ -59,13 +59,14 @@ function Login() {
     event.preventDefault();
     try {
       await login("usuarios/logar", userLogin, setRespUserLogin);
-      toast.success("Usuario conectado. tamo juntão", {
+      console.log(respUserLogin);
+      toast.success("Usuario conectado.", {
         theme: "colored",
         autoClose: 2000,
         hideProgressBar: true,
       });
     } catch (error) {
-      toast.error(`Deu ruim.`, {
+      toast.error(`Erro`, {
         theme: "colored",
         autoClose: 2000,
         hideProgressBar: true,
@@ -77,14 +78,15 @@ function Login() {
     if (token !== "") {
       dispatch(addToken(token));
       navigate("/home");
+      console.log(respUserLogin);
     }
   }, [token]);
 
-  //metodo para pegar o token e o id do json e guardar no redux
   useEffect(() => {
     if (respUserLogin.token !== "") {
       dispatch(addToken(respUserLogin.token));
       navigate("/home");
+      console.log(respUserLogin);
     }
   }, [respUserLogin.token]);
 

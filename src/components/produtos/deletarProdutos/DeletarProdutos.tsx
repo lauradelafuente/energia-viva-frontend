@@ -19,7 +19,6 @@ function DeletarProdutos() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [produto, setProduto] = useState<Produtos>();
-  const dispatch = useDispatch();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );

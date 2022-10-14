@@ -31,17 +31,28 @@ function Navbar() {
                   </Typography>
                 </Box>
               </Link>
-
-              <Box mx={1} className="cursor">
-                <Typography
-                  variant="h6"
-                  color="inherit"
-                  fontFamily="Bangers cursive"
-                >
-                  Categorias
-                </Typography>
-              </Box>
-
+              <Link to="categorias">
+                <Box mx={1} className="cursor">
+                  <Typography
+                    variant="h6"
+                    color="inherit"
+                    fontFamily="Bangers cursive"
+                  >
+                    Categorias
+                  </Typography>
+                </Box>
+              </Link>
+              <Link to="/formularioCategoria">
+                <Box mx={1} className="cursor">
+                  <Typography
+                    variant="h6"
+                    color="inherit"
+                    fontFamily="Bangers cursive"
+                  >
+                    Cadastrar Categorias
+                  </Typography>
+                </Box>
+              </Link>
               <Box mx={1} className="cursor">
                 <Typography
                   variant="h6"
@@ -52,7 +63,7 @@ function Navbar() {
                 </Typography>
               </Box>
 
-              <Box mx={1} className="cursor" marginLeft= "135vh">
+              <Box mx={1} className="cursor" marginLeft="135vh">
                 <Typography
                   variant="h6"
                   color="inherit"

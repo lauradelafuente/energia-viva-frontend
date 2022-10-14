@@ -1,3 +1,4 @@
+import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import CadastroCategoria from "./components/categoria/cadastroCategoria/CadastroCategoria";
@@ -12,15 +13,13 @@ import CadastroUsuario from "./paginas/cadastro/CadastroUsuario";
 import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import store from "./store/store";
-import { Provider } from "react-redux";
 
 function App() {
   return (
-    <Provider store = {store}>
-    <BrowserRouter>
-      <Navbar />
+    <Provider store={store}>
+      <BrowserRouter>
+        <Navbar />
 
-      <div style={{ minHeight: "100vh" }}>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
@@ -38,10 +37,9 @@ function App() {
           <Route path="/formularioProduto" element={<CadastroProdutos />} />
           <Route path="/formularioProduto/:id" element={<CadastroProdutos />} />
         </Routes>
-      </div>
 
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
     </Provider>
   );
 }

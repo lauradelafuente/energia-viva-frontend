@@ -13,7 +13,7 @@ function CadastroCategoria() {
 
   const { id } = useParams<{ id: string }>();
 
-  const token: any = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
 
@@ -30,6 +30,12 @@ function CadastroCategoria() {
     }
   }, [token]);
 
+  useEffect(() => {
+    if (id !== undefined) {
+      findById(id);
+    }
+  }, [id]);
+
   async function findById(id: string) {
     buscaId(`/categoria/${id}`, setCategoria, {
       headers: {
@@ -37,12 +43,6 @@ function CadastroCategoria() {
       },
     });
   }
-
-  useEffect(() => {
-    if (id !== undefined) {
-      findById(id);
-    }
-  }, [id]);
 
   function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     setCategoria({
@@ -53,7 +53,6 @@ function CadastroCategoria() {
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(" " + JSON.stringify(categoria));
 
     if (id !== undefined) {
       console.log(categoria);

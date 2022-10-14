@@ -18,7 +18,7 @@ function DeletarCategoria() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
-  const token: any = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
 

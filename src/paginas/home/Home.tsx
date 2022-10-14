@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import ModalProdutos from "../../components/produtos/modalProdutos/ModalProdutos";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import "./Home.css";
@@ -55,16 +55,18 @@ function Home() {
             <Box marginRight={1}>
               <ModalProdutos />
             </Box>
-            <Button
-              variant="outlined"
-              style={{
-                borderColor: "white",
-                backgroundColor: "#3F51B5",
-                color: "white",
-              }}
-            >
-              Ver Postagens
-            </Button>
+            <Link to="/produtos">
+              <Button
+                variant="outlined"
+                style={{
+                  borderColor: "white",
+                  backgroundColor: "#3F51B5",
+                  color: "white",
+                }}
+              >
+                Ver Postagens
+              </Button>
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={6}>

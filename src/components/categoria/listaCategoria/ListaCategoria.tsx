@@ -30,6 +30,7 @@ function ListaCategoria() {
   }, [token]);
 
   async function getCategoria() {
+    console.log(token);
     await busca("/categoria", setCategoria, {
       headers: { Authorization: token },
     });

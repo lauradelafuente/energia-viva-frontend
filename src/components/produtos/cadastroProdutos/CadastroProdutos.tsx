@@ -21,9 +21,11 @@ import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function CadastroProdutos() {
   let navigate = useNavigate();
+
   const { id } = useParams<{ id: string }>();
+
   const [categorias, setCategorias] = useState<Categoria[]>([]);
-  const dispatch = useDispatch();
+
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
@@ -35,12 +37,12 @@ function CadastroProdutos() {
     }
   }, [token]);
 
-  const [categoria, setCategoria] = useState<Categoria>({
+  const [categoria, setCategoria]: any = useState<Categoria>({
     id: 0,
     tipoProduto: "",
     descricao: "",
   });
-  const [produto, setProduto] = useState<Produtos>({
+  const [produto, setProduto]: any = useState<Produtos>({
     id: 0,
     nomeProduto: " ",
     marca: "",
@@ -49,6 +51,7 @@ function CadastroProdutos() {
     quantidade: 0,
     material: "",
     potencia: "", //potencia sera adicionada no nome e esse campo sera fotos
+    categoria: null,
   });
 
   useEffect(() => {
@@ -58,22 +61,23 @@ function CadastroProdutos() {
     });
   }, [categoria]);
 
-  useEffect(() => {
-    getCategoria();
-    if (id !== undefined) {
-      findByIdProduto(id);
-    }
-  }, [id]);
-  async function getCategoria() {
-    await busca("/categoria", setCategorias, {
+  async function findByIdProduto(id: string) {
+    await buscaId(`produto/${id}`, setProduto, {
       headers: {
         Authorization: token,
       },
     });
   }
 
-  async function findByIdProduto(id: string) {
-    await buscaId(`produto/${id}`, setProduto, {
+  useEffect(() => {
+    getCategoria();
+    if (id !== undefined) {
+      findByIdProduto(id);
+    }
+  }, [id]);
+
+  async function getCategoria() {
+    await busca("/categoria", setCategorias, {
       headers: {
         Authorization: token,
       },
@@ -118,10 +122,10 @@ function CadastroProdutos() {
         <Typography
           variant="h3"
           color="textSecondary"
-          component="h1"
+          component="h3"
           align="center"
         >
-          Formulário de cadastro do produto
+          kk
         </Typography>
         <TextField
           value={produto.nomeProduto}
@@ -213,7 +217,7 @@ function CadastroProdutos() {
               <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
             ))}
           </Select>
-          <FormHelperText>Escolha um tema para a postagem</FormHelperText>
+          <FormHelperText>Escolha uma Categoria para o produto</FormHelperText>
           <Button type="submit" variant="contained" color="primary">
             Finalizar
           </Button>

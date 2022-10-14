@@ -11,7 +11,6 @@ interface Produtos {
   material: string;
   potencia: string;
   categoria?: Categoria | null;
-  usuario: User | null;
 }
 
 export default Produtos;

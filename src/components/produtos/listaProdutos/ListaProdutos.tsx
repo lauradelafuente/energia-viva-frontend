@@ -14,11 +14,13 @@ import { busca, post } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function ListaProdutos() {
+  let navigate = useNavigate();
+
   const [produtos, setProdutos] = useState<Produtos[]>([]);
+
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
-  let navigate = useNavigate();
 
   useEffect(() => {
     if (token === "") {
@@ -27,7 +29,8 @@ function ListaProdutos() {
     }
   }, [token]);
 
-  async function getPost() {
+  async function getProduto() {
+    console.log(token);
     await busca("/produto", setProdutos, {
       headers: {
         Authorization: token,
@@ -36,7 +39,7 @@ function ListaProdutos() {
   }
 
   useEffect(() => {
-    getPost();
+    getProduto();
   }, [produtos.length]);
 
   return (
