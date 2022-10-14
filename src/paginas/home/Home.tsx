@@ -26,7 +26,7 @@ function Home() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        style={{ backgroundColor: "#fff59d" }}
+        style={{ backgroundColor: "white" }}
       >
         <Grid alignItems="center" item xs={6}>
           <Box paddingX={20}>
@@ -36,7 +36,7 @@ function Home() {
               color="textPrimary"
               component="h3"
               align="center"
-              style={{ color: "black", fontWeight: "bold" }}
+              style={{ color: "#6798C0", fontWeight: "bold" }}
             >
               Seja bem vindo(a)!
             </Typography>

@@ -15,7 +15,7 @@ function Footer() {
         alignItems="center"
       >
         <Grid alignItems="center" item xs={12}>
-          <Box style={{backgroundColor: 'black'}}>
+          <Box style={{backgroundColor: '#6798C0'}}>
             <Box
               paddingTop={1}
               display="flex"
@@ -53,7 +53,7 @@ function Footer() {
               </a>
             </Box>
           </Box>
-          <Box style={{ backgroundColor: 'black', height: '60px' }}>
+          <Box style={{ backgroundColor: '#6798C0', height: '60px' }}>
             <Box paddingTop={1}>
               <Typography
                 variant="subtitle2"
