@@ -1,21 +1,28 @@
-.sublinhado {
-  text-decoration: none;
-}
 .cursor {
-  color: white;
   font-family: "Bangers", cursive;
+  text-decoration: none;
+  color: #6798c0;
 }
 .navbar {
-  background-color: #6798C0;
+  background-color: #6798c0 !important;
 }
 .logo {
   width: 100px;
   height: 100px;
 }
 .carButton {
-  color: #FDC921 !important;
+  color: aliceblue !important;
 }
 
 .texto {
   font-size: 15px !important;
+}
+.icon-1 {
+  color: aliceblue !important;
+}
+.search {
+  background-color: aliceblue !important;
+}
+.cursor {
+  cursor: pointer;
 }
