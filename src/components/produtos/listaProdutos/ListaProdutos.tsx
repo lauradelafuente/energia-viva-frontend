@@ -5,6 +5,9 @@ import {
   Typography,
   CardActions,
   Button,
+  CardMedia,
+  Container,
+  Grid,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -43,56 +46,43 @@ function ListaProdutos() {
   }, [produtos.length]);
 
   return (
-    <>
-      {produtos.map((produtos) => (
-        <Box m={2}>
-          <Card variant="outlined">
-            <CardContent>
-              <Typography color="textSecondary" gutterBottom>
-                Produtos
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produtos.potencia /*foto*/}
-              </Typography>
-              <Typography variant="h5" component="h2">
-                {produtos.nomeProduto}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produtos.preco}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produtos.dimensao}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produtos.marca}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produtos.material}
-              </Typography>
-              <Typography variant="body2" component="p">
-                <h1>Quanditade disponivel: </h1> {produtos.quantidade}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produtos.categoria?.descricao}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produtos.categoria?.tipoProduto}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Box display="flex" justifyContent="center" mb={1.5}>
+   <>
+      <Container>
+      <Grid container spacing={3}>
+        {produtos.map((produtos)=>(
+          <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image={`${produtos.potencia}`}
+        alt="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {produtos.nomeProduto}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Dimensão: {produtos.dimensao}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Marca: {produtos.marca}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Categoria: {produtos.categoria?.tipoProduto}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Preço: R${produtos.preco}
+        </Typography>
+      </CardContent>
+      <CardActions>
+      <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link
                   to={`/formularioProduto/${produtos.id}`}
                   className="text-decorator-none"
                 >
                   <Box mx={1}>
-                    <Button
-                      variant="contained"
-                      className="marginLeft"
-                      size="small"
-                      color="primary"
-                    >
-                      atualizar
+                    <Button variant="contained" className="marginLeft" size="small" color="primary" style={{backgroundColor:'#6798C0'}}>
+                      Atualizar
                     </Button>
                   </Box>
                 </Link>
@@ -101,18 +91,19 @@ function ListaProdutos() {
                   className="text-decorator-none"
                 >
                   <Box mx={1}>
-                    <Button variant="contained" size="small" color="secondary">
-                      deletar
+                    <Button variant="contained" size="small" color="secondary" style={{backgroundColor:'#FDC921'}}>
+                      Deletar
                     </Button>
                   </Box>
                 </Link>
               </Box>
-            </CardActions>
-          </Card>
-        </Box>
-      ))}
+      </CardActions>
+      </Card>
+        ))}
+    </Grid>
+    </Container>
     </>
-  );
-}
+    );
+   }
 
-export default ListaProdutos;
+  export default ListaProdutos;

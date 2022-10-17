@@ -51,6 +51,7 @@ function Home() {
               A maior empresa de tecnologia Solar!
             </Typography>
           </Box>
+          
           <Box display="flex" justifyContent="center">
             <Box marginRight={1}>
               <ModalProdutos />
@@ -70,11 +71,7 @@ function Home() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <img
-            src="https://cdn.discordapp.com/attachments/1011246818442608711/1024788240978427974/rounded-in-photoretrica.png"
-            alt=""
-            className="imagem"
-          />
+       
         </Grid>
         <Grid xs={12} style={{ backgroundColor: "white" }}></Grid>
       </Grid>
