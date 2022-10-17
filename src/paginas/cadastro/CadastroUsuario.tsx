@@ -67,10 +67,9 @@ function CadastroUsuario() {
 
   return (
     <>
-      <Grid container alignItems="center" justifyContent="center">
-        <Grid item xs={6} className="bg-cadastro"></Grid>
-        <Grid container xs={6} justifyContent="center">
-          <Grid item xs={8} justifyContent="center">
+      <Grid container direction='row' justifyContent='center' alignItems='center' className='bg-cadastro' >
+            <Grid item xs={6} alignItems='center' >
+            <Box paddingX={10} paddingY={5} className="efeito">
             <form onSubmit={onSubmit}>
               <Typography variant="h2">Cadastre-se</Typography>
 
@@ -151,7 +150,7 @@ function CadastroUsuario() {
 
               <Box display="flex" justifyContent="space-around" marginTop={2}>
                 <Link to="/login" className="text-decoration-none">
-                  <Button type="submit" variant="contained" color="secondary">
+                  <Button type="submit" variant="contained" className="botao">
                     Cancelar
                   </Button>
                 </Link>
@@ -165,9 +164,10 @@ function CadastroUsuario() {
                 </Button>
               </Box>
             </form>
+            </Box>
           </Grid>
         </Grid>
-      </Grid>
+      
     </>
   );
 }

@@ -93,14 +93,14 @@ function Login() {
   return (
     <>
       <Grid
-      
         container
         direction="row"
         alignItems="center"
         justifyContent="center"
+        className="bg-login"
       >
-        <Grid item xs={6} alignItems="center" justifyContent="center">
-          <Box paddingX={20}>
+        <Grid  alignItems="center" justifyContent="center">
+          <Box paddingX={15} marginX={30} paddingY={20} className="efeito">
             <form onSubmit={conectar}>
               <Typography variant="h2" align="center">
                 Entrar
@@ -133,12 +133,13 @@ function Login() {
                 fullWidth
               />
 
-              <Box display="flex" justifyContent="center" marginTop={2}>
+              <Box display="flex" justifyContent="center" marginTop={2} paddingX={35} >
                 <Button
                   type="submit"
                   variant="contained"
                   color="primary"
                   disabled={!form}
+                  className="botão"
                 >
                   Entrar
                 </Button>
@@ -147,12 +148,12 @@ function Login() {
 
             <Box display="flex" justifyContent="center" marginTop={2}>
               <Box marginRight={1}>
-                <Typography variant="subtitle1">
+                <Typography variant="h6" className="cadastro1">
                   Ainda não tem uma conta?
                 </Typography>
               </Box>
-              <Link to="/cadastro">
-                <Typography variant="subtitle1" align="center">
+              <Link to="/cadastro" className="cadastro">
+                <Typography variant="h6" align="center" >
                   Cadastre-se
                 </Typography>
               </Link>
@@ -160,7 +161,7 @@ function Login() {
           </Box>
         </Grid>
 
-        <Grid item xs={6} className="bg-login"></Grid>
+        
       </Grid>
     </>
   );
