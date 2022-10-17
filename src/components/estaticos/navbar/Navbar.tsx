@@ -64,8 +64,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function Navbar() {
-  const [searchTerm, setSearchTerm] = useState("");
+function Navbar(props: any) {
   const [produtos, setProdutos] = useState<Produtos[]>([]);
   let history = useNavigate();
   let dispatch = useDispatch();
@@ -102,6 +101,10 @@ function Navbar() {
       },
     });
   }
+  let handleFilter = (event: any) => {
+    let lowerCase = event.target.value.toLowerCase();
+    props.setInputText(lowerCase);
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -160,9 +163,7 @@ function Navbar() {
             justifyContent={"flex-end"}
           >
             <Grid item>
-              <Search
-                className="search"
-              >
+              <Search className="search" onChange={handleFilter}>
                 <SearchIconWrapper>
                   <SearchIcon />
                 </SearchIconWrapper>

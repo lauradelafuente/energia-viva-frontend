@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -15,10 +16,11 @@ import Login from "./paginas/login/Login";
 import store from "./store/store";
 
 function App() {
+  const [inputText, setInputText] = useState("");
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Navbar />
+        <Navbar setInputText={setInputText} />
 
         <Routes>
           <Route path="/" element={<Login />} />
