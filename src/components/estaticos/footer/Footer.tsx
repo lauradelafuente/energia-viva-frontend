@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import './Footer.css'
 
@@ -28,28 +28,16 @@ function Footer() {
                 gutterBottom
                 style={{ color: 'white' }}
               >
-                Siga-nos nas redes sociais{' '}
+                Acompanhe nosso projeto:{' '}
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" justifyContent="center">
               <a
-                href="https://www.facebook.com/generationbrasil"
+                href="https://github.com/lucaandrey/energia-viva-frontend"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FacebookIcon style={{ fontSize: 60, color: 'white' }} />
-              </a>
-              <a
-                href="https://www.instagram.com/generationbrasil/"
-                target="_blank"
-              >
-                <InstagramIcon style={{ fontSize: 60, color: 'white' }} />
-              </a>
-              <a
-                href="https://www.linkedin.com/school/generationbrasil/"
-                target="_blank"
-              >
-                <LinkedInIcon style={{ fontSize: 60, color: 'white' }} />
+              <GitHubIcon style={{ fontSize: 45, color: 'white' }} />
               </a>
             </Box>
           </Box>
@@ -65,7 +53,7 @@ function Footer() {
               </Typography>
             </Box>
             <Box>
-              <a target="_blank" href="https://brasil.generation.org">
+              <a target="_blank" href="https://github.com/lucaandrey/energia-viva-frontend">
                 <Typography
                   variant="subtitle2"
                   gutterBottom

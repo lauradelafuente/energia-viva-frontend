@@ -12,6 +12,7 @@ import ListaProdutos from "./components/produtos/listaProdutos/ListaProdutos";
 import CadastroUsuario from "./paginas/cadastro/CadastroUsuario";
 import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
+import SobreNos from "./paginas/sobrenos/SobreNos";
 import store from "./store/store";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/deletarProduto/:id" element={<DeletarProdutos />} />
           <Route path="/formularioProduto" element={<CadastroProdutos />} />
           <Route path="/formularioProduto/:id" element={<CadastroProdutos />} />
+          <Route path="/sobreNos/" element={<SobreNos />} />
         </Routes>
 
         <Footer />
