@@ -56,7 +56,7 @@ function Home() {
             <Box marginRight={1}>
               <ModalProdutos />
             </Box>
-            <Link to="/produtos">
+            <Link to="/produtos" className="text">
               <Button
                 variant="outlined"
                 style={{
@@ -71,7 +71,7 @@ function Home() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-       
+      
         </Grid>
         <Grid xs={12} style={{ backgroundColor: "white" }}></Grid>
       </Grid>

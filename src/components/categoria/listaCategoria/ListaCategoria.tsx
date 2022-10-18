@@ -56,9 +56,9 @@ function ListaCategoria() {
                 <Typography color="textSecondary" gutterBottom>
                   Categoria
                 </Typography>
-                <Typography variant="h5" component="h2">
+                <p>
                   {categoria.descricao}
-                </Typography>
+                </p>
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
