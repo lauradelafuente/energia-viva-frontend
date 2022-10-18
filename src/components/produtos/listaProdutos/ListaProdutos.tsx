@@ -16,6 +16,68 @@ import Produtos from "../../../models/Produtos";
 import { busca, post } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import Navbar from "../../estaticos/navbar/Navbar";
+import './ListaProdutos.css'
+import TextInfoContent from '@mui-treasury/components/content/textInfo';
+import { useBlogTextInfoContentStyles } from '@mui-treasury/styles/textInfoContent/blog';
+import { useOverShadowStyles } from '@mui-treasury/styles/shadow/over';
+import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(({ breakpoints, spacing }) => ({
+  root: {
+    margin: 'auto',
+    borderRadius: spacing(2), // 16px
+    transition: '0.3s',
+    boxShadow: '0px 14px 80px rgba(34, 35, 58, 0.2)',
+    position: 'relative',
+    maxWidth: 500,
+    marginLeft: 'auto',
+    overflow: 'initial',
+    background: '#ffffff',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingBottom: spacing(2),
+    [breakpoints.up('md')]: {
+      flexDirection: 'row',
+      paddingTop: spacing(2),
+    },
+  },
+  media: {
+    width: '88%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: spacing(-3),
+    height: 0,
+    paddingBottom: '48%',
+    borderRadius: spacing(2),
+    backgroundColor: '#fff',
+    position: 'relative', 
+    [breakpoints.up('md')]: {
+      width: '100%',
+      marginLeft: spacing(-3),
+      marginTop: 0,
+      transform: 'translateX(-8px)',
+    },
+    '&:after': {
+      content: '" "',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundImage: 'linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)',
+      borderRadius: spacing(2), // 16
+      opacity: 0.5,
+    },
+  },
+  content: {
+    padding: 24,
+  },
+  cta: {
+    marginTop: 24,
+    textTransform: 'initial',
+  },
+}));
 
 function ListaProdutos(props: any) {
   let navigate = useNavigate();
@@ -65,76 +127,34 @@ function ListaProdutos(props: any) {
     }
   });
 
+  const styles = useStyles();
+  const {
+    button: buttonStyles,
+    ...contentStyles
+  } = useBlogTextInfoContentStyles();
+  const shadowStyles = useOverShadowStyles();
+
   return (
     <>
-      <Container>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4} lg={2}>
-            {filteredList.map((produto) => (
-              <Card>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={`${produto.potencia}`}
-                  alt="green iguana"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {produto.nomeProduto}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Dimensão: {produto.dimensao}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Marca: {produto.marca}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Categoria: {produto.categoria?.tipoProduto}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Preço: R${produto.preco}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Box display="flex" justifyContent="center" mb={1.5}>
-                    <Link
-                      to={`/formularioProduto/${produto.id}`}
-                      className="text-decorator-none"
-                    >
-                      <Box mx={1}>
-                        <Button
-                          variant="contained"
-                          className="marginLeft"
-                          size="small"
-                          color="primary"
-                          style={{ backgroundColor: "#6798C0" }}
-                        >
-                          Atualizar
-                        </Button>
-                      </Box>
-                    </Link>
-                    <Link
-                      to={`/deletarProduto/${produto.id}`}
-                      className="text-decorator-none"
-                    >
-                      <Box mx={1}>
-                        <Button
-                          variant="contained"
-                          size="small"
-                          color="secondary"
-                          style={{ backgroundColor: "#FDC921" }}
-                        >
-                          Deletar
-                        </Button>
-                      </Box>
-                    </Link>
-                  </Box>
-                </CardActions>
-              </Card>
-            ))}
-          </Grid>
-        </Grid>
-      </Container>
+    <Card className={cx(styles.root, shadowStyles.root)}>
+      <CardMedia
+        className={styles.media}
+        image={
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png'
+        }
+      />
+      <CardContent>
+        <TextInfoContent
+          classes={contentStyles}
+          overline={'28 MAR 2019'}
+          heading={'What is Git ?'}
+          body={
+            'Git is a distributed version control system. Every dev has a working copy of the code and...'
+          }
+        />
+        <Button className={buttonStyles}>Read more</Button>
+      </CardContent>
+    </Card>
     </>
   );
 }
