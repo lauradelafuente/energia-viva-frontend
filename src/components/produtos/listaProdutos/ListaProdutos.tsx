@@ -20,7 +20,7 @@ import Navbar from "../../estaticos/navbar/Navbar";
 function ListaProdutos(props: any) {
   let navigate = useNavigate();
 
-  const [produtos, setProdutos] = useState<Produtos[]>([]);
+  const [produtos, setProdutos] = useState<any[]>([]);
 
   const [search, setSearch] = useState("");
 
@@ -58,7 +58,7 @@ function ListaProdutos(props: any) {
       return elements;
     } else {
       console.log(elements.nomeProduto.toLowerCase().includes(filter));
-      if (filter !== "") {
+      if (elements !== "") {
         return (vazio = true);
       }
       return elements.nomeProduto.toLowerCase().includes(filter);
@@ -68,10 +68,10 @@ function ListaProdutos(props: any) {
   return (
     <>
       <Container>
-        <Grid container spacing={3} className={`${vazio ? "hidden" : "block"}`}>
+        <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4} lg={2}>
             {filteredList.map((produto) => (
-              <Card sx={{ maxWidth: 345 }}>
+              <Card>
                 <CardMedia
                   component="img"
                   height="140"
