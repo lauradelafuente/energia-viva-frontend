@@ -23,8 +23,9 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       position: "absolute",
       width: 400,
+     height: 570,
       backgroundColor: theme.palette.background.paper,
-      border: "2px solid #000",
+      border: "1px solid #000",
       boxShadow: theme.shadows[5],
       padding: theme.spacing(2, 4, 3),
     },
@@ -56,7 +57,7 @@ function ModalProdutos() {
   return (
     <div>
       <Button className="botao" onClick={handleOpen}>
-        Nova Postagem
+        Novo Produto
       </Button>
       <Modal
         open={open}
