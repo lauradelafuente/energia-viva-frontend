@@ -9,7 +9,7 @@ import {
   Container,
   Grid,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ChangeEvent } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Produtos from "../../../models/Produtos";
@@ -20,7 +20,9 @@ import Navbar from "../../estaticos/navbar/Navbar";
 function ListaProdutos(props: any) {
   let navigate = useNavigate();
 
-  const [produtos, setProdutos] = useState<any[]>([]);
+  const [produtos, setProdutos] = useState<Produtos[]>([]);
+
+  const [search, setSearch] = useState("");
 
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
@@ -36,7 +38,6 @@ function ListaProdutos(props: any) {
   }, [token]);
 
   async function getProduto() {
-    console.log(token);
     await busca("/produto", setProdutos, {
       headers: {
         Authorization: token,
@@ -48,24 +49,27 @@ function ListaProdutos(props: any) {
     getProduto();
   }, [produtos.length]);
 
-  const filteredList = produtos.filter((filter) => {
-    let filteredProducts = [];
+  const productFilter = (name: ChangeEvent<HTMLInputElement>) => {
+    setSearch(name.target.value);
+  };
+
+  const filteredList = produtos.filter((elements) => {
     if (filter === "") {
-      return filter;
-    }
-    for (let i in filter) {
-      if (filter[i].nomeProduto.includes(filter)) {
-        filteredProducts.push(filter[i]);
+      return elements;
+    } else {
+      console.log(elements.nomeProduto.toLowerCase().includes(filter));
+      if (filter !== "") {
+        return (vazio = true);
       }
+      return elements.nomeProduto.toLowerCase().includes(filter);
     }
-    setProdutos(filteredProducts);
   });
 
   return (
     <>
       <Container>
-        <Grid container spacing={3}>
-          <div>
+        <Grid container spacing={3} className={`${vazio ? "hidden" : "block"}`}>
+          <Grid item xs={12} sm={6} md={4} lg={2}>
             {filteredList.map((produto) => (
               <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
@@ -128,7 +132,7 @@ function ListaProdutos(props: any) {
                 </CardActions>
               </Card>
             ))}
-          </div>
+          </Grid>
         </Grid>
       </Container>
     </>
