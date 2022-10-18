@@ -1,23 +1,25 @@
 .container {
-  height: 100vh;
-  width: 100vw;
+  height: 70vh;
+  width: 70wh;
   max-height: 800px;
   max-width: 1280px;
-  min-height: 600px;
+  min-height: 100px;
   min-width: 1000px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto }
+  margin: 0 auto;
+}
 
 .border {
-height: 369px;
+  height: 369px;
   width: 290px;
   background: transparent;
   border-radius: 10px;
   transition: border 1s;
   position: relative;
-border: 1px solid white }
+  border: 1px solid white;
+}
 
 .card {
   height: 379px;
@@ -31,84 +33,89 @@ border: 1px solid white }
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative }
+  position: relative;
+}
 
 .card0 {
-  background: url('https://i.imgur.com/iGT4uKO.png') center center no-repeat;
+  background: url("https://i.imgur.com/iGT4uKO.png") center center no-repeat;
+  padding-top: 10%;
 }
 
 .card0:hover {
-    background: url('https://i.imgur.com/iGT4uKO.png') left center no-repeat
+  background: url("https://i.imgur.com/iGT4uKO.png") left center no-repeat;
 }
 
 .card0 h2 {
-      opacity: 1
+  opacity: 1;
 }
 
 .card1 {
-  background: url('https://i.imgur.com/4D06gnp.png') center center no-repeat
+  background: url("https://i.imgur.com/4D06gnp.png") center center no-repeat;
 }
 
 .card1:hover {
-    background: url('https://i.imgur.com/4D06gnp.png') left center no-repeat
+  background: url("https://i.imgur.com/4D06gnp.png") left center no-repeat;
 }
 
 .card1 h2 {
-      opacity: 1 }
+  opacity: 1;
+}
 
 .card2 {
-  background: url('https://i.imgur.com/AkQ4U8I.png') center center no-repeat
+  background: url("https://i.imgur.com/AkQ4U8I.png") center center no-repeat;
 }
 
 .card2:hover {
-    background: url('https://i.imgur.com/AkQ4U8I.png') left center no-repeat
-  }
+  background: url("https://i.imgur.com/AkQ4U8I.png") left center no-repeat;
+}
 
 .card2 h2 {
-    opacity: 1 }
+  opacity: 1;
+}
 
 .card3 {
-    background: url('https://i.imgur.com/YgGbt2A.png') center center no-repeat
+  background: url("https://i.imgur.com/YgGbt2A.png") center center no-repeat;
 }
-      
+
 .card3:hover {
-    background: url('https://i.imgur.com/YgGbt2A.png') left center no-repeat
+  background: url("https://i.imgur.com/YgGbt2A.png") left center no-repeat;
 }
-      
+
 .card3 h2 {
-opacity: 1 
+  opacity: 1;
 }
 
 .card4 {
-    background: url('https://i.imgur.com/MOiqjhe.png') center center no-repeat
-  }
-  
-  .card4:hover {
-      background: url('https://i.imgur.com/MOiqjhe.png') left center no-repeat
-  }
-  
-  .card4 h2 {
-        opacity: 1 
+  background: url("https://i.imgur.com/MOiqjhe.png") center center no-repeat;
+}
+
+.card4:hover {
+  background: url("https://i.imgur.com/MOiqjhe.png") left center no-repeat;
+}
+
+.card4 h2 {
+  opacity: 1;
 }
 
 .card5 {
-  background: url('https://i.imgur.com/HcxWQhN.png') center center no-repeat
+  background: url("https://i.imgur.com/HcxWQhN.png") center center no-repeat;
 }
 
 .card5:hover {
-    background: url('https://i.imgur.com/HcxWQhN.png') left center no-repeat
+  background: url("https://i.imgur.com/HcxWQhN.png") left center no-repeat;
 }
 
 .card5 h2 {
-      opacity: 1 
+  opacity: 1;
 }
 
 h2 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   margin: 20px;
   opacity: 0;
-  transition: opacity 1s }
+  transition: opacity 1s;
+}
 
 .icons {
   position: absolute;
@@ -120,7 +127,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .colunas {
