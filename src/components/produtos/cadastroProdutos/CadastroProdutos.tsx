@@ -124,9 +124,7 @@ function CadastroProdutos() {
           color="textSecondary"
           component="h3"
           align="center"
-        >
-          
-        </Typography>
+        ></Typography>
         <TextField
           value={produto.nomeProduto}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
@@ -152,7 +150,7 @@ function CadastroProdutos() {
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="marca"
           label="Marca"
-          name="Marca"
+          name="marca"
           variant="outlined"
           margin="normal"
           fullWidth

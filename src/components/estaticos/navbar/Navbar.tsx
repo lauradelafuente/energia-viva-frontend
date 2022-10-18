@@ -139,7 +139,7 @@ function Navbar(props: any) {
               <Link to="/home" className="cursor">
                 <MenuItem onClick={handleClose}> Home </MenuItem>
               </Link>
-              <Link to="/home" className="cursor">
+              <Link to="/sobreNos" className="cursor">
                 <MenuItem onClick={handleClose}> Sobre Nos </MenuItem>
               </Link>
               <Link to="/produtos" className="cursor">
