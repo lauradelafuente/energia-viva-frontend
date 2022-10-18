@@ -125,13 +125,13 @@ function CadastroProdutos() {
           component="h3"
           align="center"
         >
-          kk
+          
         </Typography>
         <TextField
           value={produto.nomeProduto}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="nomeProduto"
-          label="nome do produto"
+          label="Nome do Produto"
           variant="outlined"
           name="nomeProduto"
           margin="normal"
@@ -141,7 +141,7 @@ function CadastroProdutos() {
           value={produto.preco}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="preco"
-          label="preco"
+          label="Preço"
           name="preco"
           variant="outlined"
           margin="normal"
@@ -151,8 +151,8 @@ function CadastroProdutos() {
           value={produto.marca}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="marca"
-          label="marca"
-          name="marca"
+          label="Marca"
+          name="Marca"
           variant="outlined"
           margin="normal"
           fullWidth
@@ -161,7 +161,7 @@ function CadastroProdutos() {
           value={produto.dimensao}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="dimensao"
-          label="dimensao"
+          label="Dimensão"
           name="dimensao"
           variant="outlined"
           margin="normal"
@@ -171,7 +171,7 @@ function CadastroProdutos() {
           value={produto.quantidade}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="quantidade"
-          label="quantidade"
+          label="Quantidade"
           name="quantidade"
           variant="outlined"
           margin="normal"
@@ -181,7 +181,7 @@ function CadastroProdutos() {
           value={produto.material}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="material"
-          label="material"
+          label="Material"
           name="material"
           variant="outlined"
           margin="normal"
@@ -191,7 +191,7 @@ function CadastroProdutos() {
           value={produto.potencia /*foto*/}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="potencia"
-          label="foto"
+          label="Foto"
           name="potencia"
           variant="outlined"
           margin="normal"
