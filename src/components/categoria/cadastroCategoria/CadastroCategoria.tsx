@@ -1,4 +1,5 @@
-import { Container, Typography, TextField, Button } from "@mui/material";
+import { Grid } from "@material-ui/core";
+import { Container, Typography, TextField, Button, Box } from "@mui/material";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -77,14 +78,29 @@ function CadastroCategoria() {
     navigate("/categorias");
   }
 
+  const [form, setForm] = useState(false);
+
+  useEffect(() => {
+    if (
+      categoria.tipoProduto !== "" &&
+      categoria.descricao !== ""
+    ) {
+      setForm(true);
+    }
+  }, [categoria]);
+
+
   return (
-    <Container maxWidth="sm" className="topo">
+    <>
+    <Grid container className="image">
+      <Box maxWidth="sm" className='topo'>
       <form onSubmit={onSubmit}>
         <Typography
           variant="h3"
           color="textSecondary"
           component="h1"
           align="center"
+          className="formatacao"
         >
           Formulário de cadastro da Categoria
         </Typography>
@@ -108,12 +124,17 @@ function CadastroCategoria() {
           margin="normal"
           fullWidth
         />
-        <Button type="submit" variant="contained" color="primary">
+        <Box display="flex" justifyContent="center" marginTop={5}>
+        <Button type="submit" variant="contained" color="primary" className="button" disabled={!form}>  
           Finalizar
         </Button>
+        </Box>
       </form>
-    </Container>
+      </Box>
+    </Grid>
+    </>
   );
+  
 }
 
 export default CadastroCategoria;

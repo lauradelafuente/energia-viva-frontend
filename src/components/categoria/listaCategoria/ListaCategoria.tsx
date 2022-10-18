@@ -5,6 +5,7 @@ import {
   Typography,
   CardActions,
   Button,
+  Grid,
 } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useEffect, useState } from "react";
@@ -42,7 +43,12 @@ function ListaCategoria() {
 
   return (
     <>
-      <Container>
+      <Grid container className="image">
+        <Box maxWidth="sm" className='caixa'>
+        <Typography variant="h4" color="textSecondary" component="h1" align="center" className="formatacao"
+        >
+          Todas as categorias:
+        </Typography>
         {categoria.map((categoria) => (
           <Box m={2}>
             <Card variant="outlined">
@@ -63,7 +69,7 @@ function ListaCategoria() {
                     <Box mx={1}>
                       <Button
                         variant="contained"
-                        className="marginLeft"
+                        className="marginLeft blue"
                         size="small"
                         color="primary"
                       >
@@ -80,6 +86,7 @@ function ListaCategoria() {
                         variant="contained"
                         size="small"
                         color="secondary"
+                        className="yellow"
                       >
                         deletar
                       </Button>
@@ -90,9 +97,11 @@ function ListaCategoria() {
             </Card>
           </Box>
         ))}
-      </Container>
+        </Box>
+      </Grid>
     </>
   );
 }
 
 export default ListaCategoria;
+
