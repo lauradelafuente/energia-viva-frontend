@@ -100,9 +100,9 @@ function Login() {
         className="bg-login"
       >
         <Grid  alignItems="center" justifyContent="center">
-          <Box paddingX={15} marginX={30} paddingY={20} className="efeito">
+          <Box padding={10} className="efeito tamanho-form">
             <form onSubmit={conectar}>
-              <Typography variant="h2" align="center">
+              <Typography variant="h3" align="center">
                 Entrar
               </Typography>
 

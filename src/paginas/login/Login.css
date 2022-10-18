@@ -21,6 +21,7 @@ border: 1px solid#6798C0;
 
 .botão{
   background-color: #6798C0 !important;
+  
 }
 .botão:hover{
   background-color: #4B84B3 !important;
@@ -34,4 +35,8 @@ border: 1px solid#6798C0;
 
   color: #ffffff !important;
   text-decoration: none !important;
+}
+.tamanho-form{
+  height: 100%;
+  width: 100%;
 }

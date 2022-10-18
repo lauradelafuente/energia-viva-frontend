@@ -75,9 +75,9 @@ function CadastroUsuario() {
         className="bg-cadastro"
       >
         <Grid item xs={6} alignItems="center">
-          <Box paddingX={10} paddingY={5} className="efeito">
+          <Box padding={5} className="efeito tamanho">
             <form onSubmit={onSubmit}>
-              <Typography variant="h2">Cadastre-se</Typography>
+              <Typography variant="h3">Cadastre-se</Typography>
 
               <TextField
                 value={user.nome}
