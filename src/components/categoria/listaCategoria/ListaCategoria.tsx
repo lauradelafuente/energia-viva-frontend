@@ -53,12 +53,12 @@ function ListaCategoria() {
           <Box m={2}>
             <Card variant="outlined">
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Categoria
-                </Typography>
-                <Typography variant="h5" component="h2">
+                <p>
+                  {categoria.tipoProduto}
+                </p>
+                <p>
                   {categoria.descricao}
-                </Typography>
+                </p>
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
