@@ -53,7 +53,7 @@ function Footer() {
               </Typography>
             </Box>
             <Box>
-              <a target="_blank" href="https://github.com/lucaandrey/energia-viva-frontend">
+              <a target="_blank" href="https://github.com/lucaandrey/energia-viva-frontend" className='text'>
                 <Typography
                   variant="subtitle2"
                   gutterBottom
