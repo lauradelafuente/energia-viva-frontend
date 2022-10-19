@@ -20,7 +20,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://github.com/lauradelafuente"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -36,7 +36,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://www.linkedin.com/in/laura-delafuente/"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -61,7 +61,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://github.com/lucaandrey"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -77,7 +77,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://www.linkedin.com/in/lucaandrey/"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -102,7 +102,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://github.com/KelvynFarias"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -118,7 +118,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://www.linkedin.com/in/kelvyn-sabino-de-farias-9163a4210/"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -147,7 +147,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://github.com/LarissaLacerdasilvad"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -163,7 +163,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://www.linkedin.com/in/larissa-lacerda-b0a218171/"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -188,7 +188,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://github.com/Guxtavo-s"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -204,7 +204,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://www.linkedin.com/in/gustavo-hmo/"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -229,7 +229,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://github.com/Henrique1200"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -245,7 +245,7 @@ function SobreNos() {
                     justifyContent="center"
                   >
                     <a
-                      href="https://github.com/lucaandrey/energia-viva-frontend"
+                      href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADddkgYB3aA8MUdgiIid6Yk4U7b5K941YbU&keywords=henrique%20leonardo&origin=RICH_QUERY_SUGGESTION&position=0&searchId=bd2a7d95-c687-4766-934b-d54bca8ec0a6&sid=6TV"
                       target="_blank"
                       rel="noreferrer"
                     >
