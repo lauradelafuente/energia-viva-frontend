@@ -33,7 +33,26 @@ function Home() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>
+          <Grid container>
+            <Grid item xs={6}>
+              <img
+                src="https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+                alt="imagem de painel solar"
+              />
+            </Grid>
+            <Grid item xs={6}>
+              <Typography>
+                Somos uma empresa com foco no acesso e distribuição de energia
+                solar, uma fonte de energia renovável, eficiente e não poluente.
+                Nossa proposta é incentivar o uso de uma energia segura que
+                preserve o meio-ambiente, onde após a compra do cliente, parte
+                da renda gerada é convertida para instalação de painéis solares
+                em comunidades carentes que não têm acesso à energia.
+              </Typography>
+            </Grid>
+          </Grid>
+        </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>

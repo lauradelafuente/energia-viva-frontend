@@ -32,7 +32,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     // marginLeft: "auto",
     overflow: "initial",
     background: "#6798C0",
-    display: "flex",
+    display: "inline-block",
     // flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
