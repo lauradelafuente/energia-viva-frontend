@@ -9,6 +9,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import useLocalStorage from "react-use-localstorage";
 import Categoria from "../../../models/Categoria";
 import { buscaId, deleteId } from "../../../service/Service";
@@ -26,7 +27,16 @@ function DeletarCategoria() {
 
   useEffect(() => {
     if (token === "") {
-      alert("voce precisa estar logado!");
+      toast.error("Voce precisa estar logado!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
       navigate("/login");
     }
   }, [token]);

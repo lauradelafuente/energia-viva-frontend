@@ -12,6 +12,7 @@ import {
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import useLocalStorage from "react-use-localstorage";
 import Categoria from "../../../models/Categoria";
 import Produtos from "../../../models/Produtos";
@@ -32,7 +33,16 @@ function CadastroProdutos() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado");
+      toast.error("Voce precisa estar logado!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
       navigate("/login");
     }
   }, [token]);
@@ -101,14 +111,32 @@ function CadastroProdutos() {
           Authorization: token,
         },
       });
-      alert("Produto atualizado com sucesso");
+      toast.success("Produto atualizado com sucesso!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     } else {
       post(`/produto`, produto, setProduto, {
         headers: {
           Authorization: token,
         },
       });
-      alert("Postagem cadastrada com sucesso");
+      toast.success("Produto cadastrado com sucesso!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     }
     back();
   }

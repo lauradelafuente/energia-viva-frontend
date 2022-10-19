@@ -19,6 +19,7 @@ import Navbar from "../../estaticos/navbar/Navbar";
 import "./ListaProdutos.css";
 import { makeStyles } from "@material-ui/core/styles";
 import cx from "clsx";
+import { toast } from "react-toastify";
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -94,7 +95,16 @@ function ListaProdutos(props: any) {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado");
+      toast.error("Voce precisa estar logado!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
       navigate("/login");
     }
   }, [token]);
