@@ -2,6 +2,7 @@ import { Typography } from "@material-ui/core";
 import { Box, Button, Grid, TextField } from "@mui/material";
 import { useState, useEffect, ChangeEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import User from "../../models/User";
 import { cadastroUsuario } from "../../service/Service";
 import "./CadastroUsuario.css";
@@ -55,15 +56,47 @@ function CadastroUsuario() {
   }
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (confirmarSenha == user.senha) {
-      cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
-      alert("Usuario cadastrado com sucesso");
-    } else {
-      alert(
-        "Dados inconsistentes. Favor verificar as informações de cadastro."
+    if(confirmarSenha === user.senha && user.senha.length >= 8 ){
+      try {
+          await cadastroUsuario('usuarios/cadastrar', user, setUserResult);
+          toast.success('Usuário criado com sucesso. Efetue seu login, por favor.', {
+              position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          theme: "colored",
+          progress: undefined,
+          }
+          );
+      } catch (error) {
+          toast.error('Dados inconsistentes. Favor verificar as informações de cadastro.', {
+              position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          theme: "colored",
+          progress: undefined,
+          }
+          );
+      }
+      } else {
+      toast.error('Senhas divergentes, ou menores que 8 caracteres. Por favor, verifique os campos.', {
+          position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      theme: "colored",
+      progress: undefined,
+      }
       );
-    }
-  }
+      }
+}
 
   return (
     <>

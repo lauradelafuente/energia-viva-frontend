@@ -59,16 +59,26 @@ function Login() {
     event.preventDefault();
     try {
       await login("usuarios/logar", userLogin, setRespUserLogin);
-      toast.success("Usuario conectado.", {
-        theme: "colored",
+      toast.success('Usuario conectado!', {
+        position: "top-center",
         autoClose: 2000,
-        hideProgressBar: true,
-      });
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     } catch (error) {
-      toast.error(`Erro`, {
-        theme: "colored",
+      toast.error(`Login ou senha incorrectos!`, {
+        position: "top-center",
         autoClose: 2000,
-        hideProgressBar: true,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
       });
     }
   }

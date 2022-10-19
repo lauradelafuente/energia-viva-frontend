@@ -21,6 +21,7 @@ import { addToken } from "../../../store/tokens/actions";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import Produtos from "../../../models/Produtos";
 import { busca } from "../../../service/Service";
+import { toast } from "react-toastify";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -78,8 +79,16 @@ function Navbar(props: any) {
 
   function goLogout() {
     dispatch(addToken(""));
-
-    alert("Usuário deslogado");
+    toast.info('Usuário deslogado', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+  });
     history("/login");
   }
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
