@@ -1,9 +1,13 @@
+import Slider from "@material-ui/core/Slider/Slider";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
+import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos";
 import ModalProdutos from "../../components/produtos/modalProdutos/ModalProdutos";
 import { TokenState } from "../../store/tokens/tokensReducer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
 import "./Home.css";
 
 function Home() {
@@ -21,60 +25,24 @@ function Home() {
 
   return (
     <>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        style={{ backgroundColor: "white" }}
+      <Swiper
+        pagination={{
+          type: "progressbar",
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
       >
-        <Grid alignItems="center" item xs={6}>
-          <Box paddingX={20}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              style={{ color: "#6798C0", fontWeight: "bold" }}
-            >
-              Seja bem vindo(a)!
-            </Typography>
-            <Typography
-              variant="h5"
-              gutterBottom
-              color="textPrimary"
-              component="h5"
-              align="center"
-              style={{ color: "black", fontWeight: "bold" }}
-            >
-              A maior empresa de tecnologia Solar!
-            </Typography>
-          </Box>
-          
-          <Box display="flex" justifyContent="center">
-            <Box marginRight={1}>
-              <ModalProdutos />
-            </Box>
-            <Link to="/produtos" className="text">
-              <Button
-                variant="outlined"
-                style={{
-                  borderColor: "white",
-                  backgroundColor: "#3F51B5",
-                  color: "white",
-                }}
-              >
-                Ver Postagens
-              </Button>
-            </Link>
-          </Box>
-        </Grid>
-        <Grid item xs={6}>
-      
-        </Grid>
-        <Grid xs={12} style={{ backgroundColor: "white" }}></Grid>
-      </Grid>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
     </>
   );
 }

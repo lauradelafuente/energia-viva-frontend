@@ -26,3 +26,14 @@
 .cursor {
   cursor: pointer;
 }
+
+.span-viva {
+  color: #fdc921;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+.h3 {
+  color: aliceblue;
+}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import CadastroCategoria from "./components/categoria/cadastroCategoria/CadastroCategoria";
 import DeletarCategoria from "./components/categoria/deletarCategoria/DeletarCategoria";
