@@ -17,6 +17,7 @@ import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import SobreNos from "./paginas/sobrenos/SobreNos";
 import store from "./store/store";
+import "swiper/css/bundle";
 
 function App() {
   const [inputText, setInputText] = useState("");
