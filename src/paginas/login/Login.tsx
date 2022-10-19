@@ -59,7 +59,6 @@ function Login() {
     event.preventDefault();
     try {
       await login("usuarios/logar", userLogin, setRespUserLogin);
-      console.log(respUserLogin);
       toast.success("Usuario conectado.", {
         theme: "colored",
         autoClose: 2000,
@@ -78,7 +77,6 @@ function Login() {
     if (token !== "") {
       dispatch(addToken(token));
       navigate("/home");
-      console.log(respUserLogin);
     }
   }, [token]);
 
@@ -86,7 +84,6 @@ function Login() {
     if (respUserLogin.token !== "") {
       dispatch(addToken(respUserLogin.token));
       navigate("/home");
-      console.log(respUserLogin);
     }
   }, [respUserLogin.token]);
 
@@ -99,7 +96,7 @@ function Login() {
         justifyContent="center"
         className="bg-login"
       >
-        <Grid  alignItems="center" justifyContent="center">
+        <Grid alignItems="center" justifyContent="center">
           <Box padding={10} className="efeito tamanho-form">
             <form onSubmit={conectar}>
               <Typography variant="h3" align="center">
@@ -133,7 +130,12 @@ function Login() {
                 fullWidth
               />
 
-              <Box display="flex" justifyContent="center" marginTop={2} paddingX={35} >
+              <Box
+                display="flex"
+                justifyContent="center"
+                marginTop={2}
+                paddingX={35}
+              >
                 <Button
                   type="submit"
                   variant="contained"
@@ -153,15 +155,13 @@ function Login() {
                 </Typography>
               </Box>
               <Link to="/cadastro" className="cadastro">
-                <Typography variant="h6" align="center" >
+                <Typography variant="h6" align="center">
                   Cadastre-se
                 </Typography>
               </Link>
             </Box>
           </Box>
         </Grid>
-
-        
       </Grid>
     </>
   );

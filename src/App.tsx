@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import CadastroCategoria from "./components/categoria/cadastroCategoria/CadastroCategoria";
 import DeletarCategoria from "./components/categoria/deletarCategoria/DeletarCategoria";
@@ -21,6 +22,7 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
+        <ToastContainer />
         <Navbar setInputText={setInputText} />
 
         <Routes>
