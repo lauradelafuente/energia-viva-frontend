@@ -170,7 +170,9 @@ function Navbar(props: any) {
             spacing={3}
             display="flex"
             justifyContent={"flex-end"}
+            
           >
+        
             <Grid item>
               <Search className="search" onChange={handleFilter}>
                 <SearchIconWrapper>
