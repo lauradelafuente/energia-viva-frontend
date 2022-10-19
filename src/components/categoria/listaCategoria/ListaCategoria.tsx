@@ -53,9 +53,9 @@ function ListaCategoria() {
           <Box m={2}>
             <Card variant="outlined">
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Categoria
-                </Typography>
+                <p>
+                  {categoria.tipoProduto}
+                </p>
                 <p>
                   {categoria.descricao}
                 </p>
