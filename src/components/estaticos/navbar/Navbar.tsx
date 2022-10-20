@@ -79,7 +79,7 @@ function Navbar(props: any) {
 
   function goLogout() {
     dispatch(addToken(""));
-    toast.info('Usuário deslogado', {
+    toast.info("Usuário deslogado", {
       position: "top-center",
       autoClose: 2000,
       hideProgressBar: false,
@@ -88,7 +88,7 @@ function Navbar(props: any) {
       draggable: true,
       progress: undefined,
       theme: "colored",
-  });
+    });
     history("/login");
   }
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -165,14 +165,19 @@ function Navbar(props: any) {
               </Link>
             </Menu>
           </Grid>
+          <Box paddingLeft={"20px"} width="100%">
+            <Link to="/home" className="logo-link">
+              <h3 className="h3">
+                Energia <span className="span-viva">Viva</span>
+              </h3>
+            </Link>
+          </Box>
           <Grid
             container
             spacing={3}
             display="flex"
             justifyContent={"flex-end"}
-            
           >
-        
             <Grid item>
               <Search className="search" onChange={handleFilter}>
                 <SearchIconWrapper>

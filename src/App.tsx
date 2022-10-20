@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import CadastroCategoria from "./components/categoria/cadastroCategoria/CadastroCategoria";
 import DeletarCategoria from "./components/categoria/deletarCategoria/DeletarCategoria";
@@ -17,6 +17,7 @@ import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import SobreNos from "./paginas/sobrenos/SobreNos";
 import store from "./store/store";
+import "swiper/css/bundle";
 
 function App() {
   const [inputText, setInputText] = useState("");
@@ -29,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home inputText={inputText} />} />
           <Route path="/categorias" element={<ListaCategoria />} />
           <Route
             path="/produtos"
