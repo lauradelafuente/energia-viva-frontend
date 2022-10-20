@@ -133,3 +133,7 @@ h2 {
 .colunas {
   width: 33%;
 }
+
+.fgradient {
+  background-image: linear-gradient(to bottom right, #FDC921, #FEDE75);
+}

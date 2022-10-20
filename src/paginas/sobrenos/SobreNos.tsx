@@ -2,11 +2,44 @@ import React from "react";
 import "./SobreNos.css";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function SobreNos() {
+  let navigate = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+    
+    useEffect(() => {
+      if (token == "") {
+        toast.error('Você precisa estar logado.', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme:"colored",
+            progress: undefined,
+        });
+          navigate("/login")
+      }
+  }, [token])
   return (
     <>
+    <Grid container direction="row" justifyContent="center" alignItems="center" paddingY={4} className="fgradient">
+    <Grid alignItems="center" className="fgradient">
+    <Box paddingX={20}>
+      <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" style={{color: 'white'}}>Nossa equipe é composta por seis desenvolvedores formados na Generation Brasil. O e-commerce tem como base uma das ODS's (Objetivos de Desenvolimento Sustentável) da ONU. A ODS 7, que põe em pauta o acesso às diferentes fontes de energia e preservação ambiental. Conheça um pouco sobre nós:</Typography>
+    </Box>
+    </Grid>
+    </Grid>
+
       <Grid container display="flex" justifyContent="flex-start">
         <div className="container">
           <Grid item xs={12} sm={6} md={4} lg={2}>
