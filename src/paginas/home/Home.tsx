@@ -32,7 +32,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     maxWidth: 500,
     // marginLeft: "auto",
     overflow: "initial",
-    background: "#6798C0",
+    background: "white",
     display: "flex",
     // flexDirection: "column",
     justifyContent: "space-around",
@@ -109,7 +109,7 @@ function Home(props: any) {
 
   return (
     <>
-      <Grid container>
+      <Grid container marginTop="50px">
         <Swiper
           pagination={{
             type: "progressbar",
@@ -125,26 +125,22 @@ function Home(props: any) {
               alignItems="center"
               justifyContent="center"
               className="img10"
-              width="80%"
-              height="40%"
             >
-              <Grid alignItems="center" justifyContent="center">
-                <Box className="efeito tamanho-form" width="50%">
-                  <Typography
-                    variant="h5"
-                    align="center"
-                    className="text-about-us"
-                  >
-                    Somos uma empresa com foco no acesso e distribuição de
-                    energia solar, uma fonte de energia renovável, eficiente e
-                    não poluente. Nossa proposta é incentivar o uso de uma
-                    energia segura que preserve o meio-ambiente, onde após a
-                    compra do cliente, parte da renda gerada é convertida para
-                    instalação de painéis solares em comunidades carentes que
-                    não têm acesso à energia.
-                  </Typography>
-                </Box>
-              </Grid>
+              <Box className="efeito tamanho-form" width="50%">
+                <Typography
+                  variant="h5"
+                  align="center"
+                  className="text-about-us"
+                >
+                  Somos uma empresa com foco no acesso e distribuição de energia
+                  solar, uma fonte de energia renovável, eficiente e não
+                  poluente. Nossa proposta é incentivar o uso de uma energia
+                  segura que preserve o meio-ambiente, onde após a compra do
+                  cliente, parte da renda gerada é convertida para instalação de
+                  painéis solares em comunidades carentes que não têm acesso à
+                  energia.
+                </Typography>
+              </Box>
             </Grid>
           </SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
@@ -171,10 +167,21 @@ function Home(props: any) {
                     image={`${produtos.potencia}`}
                   />
                   <CardContent>
-                    <Button className="ok">Atualizar</Button>
-                    <Typography color="textSecondary" gutterBottom>
+                    <Typography color="textSecondary" variant="h6" gutterBottom>
                       {produtos.nomeProduto}
                     </Typography>
+                    <Typography color="textSecondary" gutterBottom>
+                      {produtos.marca}
+                    </Typography>
+                    <Typography color="textSecondary" gutterBottom>
+                      {produtos.dimensao}
+                    </Typography>
+                    <Typography color="textSecondary" gutterBottom>
+                      R$ {produtos.preco}
+                    </Typography>
+                    <Link to="/formularioProduto">
+                      <Button className="ok">Atualizar</Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </Grid>
