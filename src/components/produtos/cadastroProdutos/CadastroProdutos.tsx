@@ -1,3 +1,4 @@
+import { Grid } from "@material-ui/core";
 import {
   Container,
   Typography,
@@ -8,6 +9,7 @@ import {
   MenuItem,
   FormHelperText,
   Button,
+  Box
 } from "@mui/material";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,6 +21,7 @@ import Produtos from "../../../models/Produtos";
 import { busca, buscaId, put, post } from "../../../service/Service";
 import { addToken } from "../../../store/tokens/actions";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import './CadastroProdutos.css'
 
 function CadastroProdutos() {
   let navigate = useNavigate();
@@ -46,7 +49,7 @@ function CadastroProdutos() {
       navigate("/login");
     }
   }, [token]);
-
+  
   const [categoria, setCategoria]: any = useState<Categoria>({
     id: 0,
     tipoProduto: "",
@@ -145,14 +148,17 @@ function CadastroProdutos() {
     navigate("/produtos");
   }
   return (
-    <Container maxWidth="sm" className="topo">
+    <Grid container className="image">
+    <Box maxWidth="sm" className="topo">
       <form onSubmit={onSubmit}>
         <Typography
           variant="h3"
           color="textSecondary"
-          component="h3"
+          component="h1"
           align="center"
-        ></Typography>
+          className="formatacao"
+ 
+        > Formulário de cadastro de novo produto</Typography>
         <TextField
           value={produto.nomeProduto}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
@@ -203,6 +209,7 @@ function CadastroProdutos() {
           margin="normal"
           fullWidth
         />
+
         <TextField
           value={produto.material}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
@@ -244,12 +251,13 @@ function CadastroProdutos() {
             ))}
           </Select>
           <FormHelperText>Escolha uma Categoria para o produto</FormHelperText>
-          <Button type="submit" variant="contained" color="primary">
+          <Button type="submit" variant="contained" color="primary" className="button" >
             Finalizar
           </Button>
         </FormControl>
       </form>
-    </Container>
+    </Box>
+    </Grid>
   );
 }
 //marca, dimensao, quantidade, material, potencia (foto)
