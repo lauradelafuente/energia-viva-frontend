@@ -1,43 +1,40 @@
-.bg-login{
-    background-image: url('https://revistamundoeletrico.com.br//wp-content/uploads/2022/05/Segmento-de-energia-solar-se-consolida-como-segunda-principal-fonte-do-mundo-1.jpg');
-    background-repeat:no-repeat;
-    min-height:100vh;
-    background-size:cover;
-    background-position:top;
-  }
-  
-  .text-decoration-none {
-    text-decoration: none;
-  }
-
-  .efeito{
-background: rgba(255, 255, 255, 0.07);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(13.2px);
--webkit-backdrop-filter: blur(13.2px);
-border: 1px solid#6798C0;
+.bg-login {
+  background-image: url("https://revistamundoeletrico.com.br//wp-content/uploads/2022/05/Segmento-de-energia-solar-se-consolida-como-segunda-principal-fonte-do-mundo-1.jpg");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: top;
 }
 
-.botão{
-  background-color: #6798C0 !important;
-  
+.text-decoration-none {
+  text-decoration: none;
 }
-.botão:hover{
-  background-color: #4B84B3 !important;
+
+.efeito {
+  background: rgba(151, 114, 114, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.2px);
+  -webkit-backdrop-filter: blur(13.2px);
+  border: 1px solid#6798C0;
 }
-.botão:disabled{
+
+.botão {
+  background-color: #6798c0 !important;
+}
+.botão:hover {
+  background-color: #4b84b3 !important;
+}
+.botão:disabled {
   background-color: rgba(180, 178, 178, 0) !important;
   border: 1px solid rgba(2, 2, 2, 0.61);
   color: rgb(60, 60, 60) !important;
 }
-.cadastro{
-
+.cadastro {
   color: #ffffff !important;
   text-decoration: none !important;
 }
-.tamanho-form{
+.tamanho-form {
   height: 100%;
   width: 100%;
-  
 }

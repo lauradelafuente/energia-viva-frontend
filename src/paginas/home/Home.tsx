@@ -21,6 +21,11 @@ import cx from "clsx";
 import "./Home.css";
 import { busca } from "../../service/Service";
 import Produtos from "../../models/Produtos";
+import * as React from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
+import SendIcon from "@mui/icons-material/Send";
+import Stack from "@mui/material/Stack";
+import UpdateOutlinedIcon from "@mui/icons-material/UpdateOutlined";
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -29,12 +34,13 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     transition: "0.3s",
     boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
     position: "relative",
-    maxWidth: 500,
+    // maxWidth: 500,
     // marginLeft: "auto",
     overflow: "initial",
     background: "white",
     display: "flex",
-    // flexDirection: "column",
+    marginTop: "20px",
+    flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
     paddingBottom: spacing(2),
@@ -86,6 +92,7 @@ function Home(props: any) {
     (state) => state.tokens
   );
   let filter = props.inputText;
+  let check: boolean = true;
   useEffect(() => {
     if (token == "") {
       alert("Você precisa estar logado");
@@ -105,54 +112,83 @@ function Home(props: any) {
     getProduto();
   }, [produtos.length]);
 
+  const checking = () => {
+    if (filter !== "") {
+      check = false;
+    }
+  };
+
   const styles = useStyles();
 
   return (
     <>
+      {checking()}
       <Grid container marginTop="50px">
-        <Swiper
-          pagination={{
-            type: "progressbar",
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <Grid
-              container
-              direction="row"
-              alignItems="center"
-              justifyContent="center"
-              className="img10"
-            >
-              <Box className="efeito tamanho-form" width="50%">
-                <Typography
-                  variant="h5"
-                  align="center"
-                  className="text-about-us"
-                >
-                  Somos uma empresa com foco no acesso e distribuição de energia
-                  solar, uma fonte de energia renovável, eficiente e não
-                  poluente. Nossa proposta é incentivar o uso de uma energia
-                  segura que preserve o meio-ambiente, onde após a compra do
-                  cliente, parte da renda gerada é convertida para instalação de
-                  painéis solares em comunidades carentes que não têm acesso à
-                  energia.
-                </Typography>
-              </Box>
-            </Grid>
-          </SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>
+        {check ? (
+          <Swiper
+            pagination={{
+              type: "progressbar",
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem1"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem2"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem3"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem4"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem5"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem6"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem7"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem8"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem9"></Grid>
+              </Grid>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Grid container justifyContent={"center"}>
+                <Grid item className="imagem10"></Grid>
+              </Grid>
+            </SwiperSlide>
+          </Swiper>
+        ) : (
+          <div></div>
+        )}
       </Grid>
+      {console.log(check)}
       <Grid>
         {produtos
           .filter((produtos) => {
@@ -171,20 +207,35 @@ function Home(props: any) {
                       {produtos.nomeProduto}
                     </Typography>
                     <Typography color="textSecondary" gutterBottom>
-                      {produtos.marca}
+                      Marca: {produtos.marca}
                     </Typography>
                     <Typography color="textSecondary" gutterBottom>
-                      {produtos.dimensao}
+                      Dimensao: {produtos.dimensao}
                     </Typography>
                     <Typography color="textSecondary" gutterBottom>
-                      R$ {produtos.preco}
+                      Preco R$ {produtos.preco},00
                     </Typography>
-                    <Link to={`/formularioProduto/${produtos.id}`}>
-                      <Button className="ok">Atualizar</Button>
-                    </Link>
-                    <Link to={`/deletarProduto/${produtos.id}`}>
-                      <Button className="ok">deletar</Button>
-                    </Link>
+                    <Stack direction="row" spacing={2}>
+                      <Link
+                        to={`/formularioProduto/${produtos.id}`}
+                        className="text-decoration"
+                      >
+                        <Button
+                          variant="contained"
+                          endIcon={<UpdateOutlinedIcon />}
+                        >
+                          Atualizar
+                        </Button>
+                      </Link>
+                      <Link
+                        to={`/deletarProduto/${produtos.id}`}
+                        className="text-decoration"
+                      >
+                        <Button variant="outlined" startIcon={<DeleteIcon />}>
+                          Deletar
+                        </Button>
+                      </Link>
+                    </Stack>
                   </CardContent>
                 </Card>
               </Grid>

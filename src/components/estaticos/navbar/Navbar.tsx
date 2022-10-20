@@ -68,7 +68,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Navbar(props: any) {
   const [produtos, setProdutos] = useState<Produtos[]>([]);
   let history = useNavigate();
-  
+
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
@@ -118,107 +118,111 @@ function Navbar(props: any) {
   };
 
   var navBarComponent;
-  if(token != "") {
-    navBarComponent = <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static" className="navbar">
-      <Toolbar>
-        <Grid>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            onClick={handleMenu}
-            className="icon-1"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Menu
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            open={open}
-            onClose={handleClose}
-          >
-            <Link to="/home" className="cursor">
-              <MenuItem onClick={handleClose}> Home </MenuItem>
-            </Link>
-            <Link to="/sobreNos" className="cursor">
-              <MenuItem onClick={handleClose}> Sobre Nos </MenuItem>
-            </Link>
-            <Link to="/produtos" className="cursor">
-              <MenuItem onClick={handleClose}> Produtos </MenuItem>
-            </Link>
-            <Link to="/formularioProduto" className="cursor">
-              <MenuItem onClick={handleClose}> Cadastrar Produtos </MenuItem>
-            </Link>
-            <Link to="/formularioCategoria" className="cursor">
-              <MenuItem onClick={handleClose}>
-                {" "}
-                Cadastrar Categorias{" "}
-              </MenuItem>
-            </Link>
-          </Menu>
-        </Grid>
-        <Box paddingLeft={"20px"} width="100%">
-          <Link to="/home" className="logo-link">
-            <h3 className="h3">
-              Energia <span className="span-viva">Viva</span>
-            </h3>
-          </Link>
-        </Box>
-        <Grid
-          container
-          spacing={3}
-          display="flex"
-          justifyContent={"flex-end"}
-        >
-          <Grid item>
-            <Search className="search" onChange={handleFilter}>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
-          </Grid>
-          <Grid item>
-            <IconButton
-              color="primary"
-              aria-label="add to shopping cart"
-              className="carButton"
-            >
-              <AddShoppingCartIcon />
-            </IconButton>
-          </Grid>
-          <Grid item>
-            <Box mx={1} onClick={goLogout} className="cursor">
-              <Typography variant="h6" color="inherit" className="icon-1">
-                LOGOUT
-              </Typography>
+  if (token != "") {
+    navBarComponent = (
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" className="navbar">
+          <Toolbar>
+            <Grid>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                sx={{ mr: 2 }}
+                onClick={handleMenu}
+                className="icon-1"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <Link to="/home" className="cursor">
+                  <MenuItem onClick={handleClose}> Home </MenuItem>
+                </Link>
+                <Link to="/sobreNos" className="cursor">
+                  <MenuItem onClick={handleClose}> Sobre Nos </MenuItem>
+                </Link>
+                <Link to="/produtos" className="cursor">
+                  <MenuItem onClick={handleClose}> Produtos </MenuItem>
+                </Link>
+                <Link to="/categorias" className="cursor">
+                  <MenuItem onClick={handleClose}> Categorias </MenuItem>
+                </Link>
+                <Link to="/formularioProduto" className="cursor">
+                  <MenuItem onClick={handleClose}>
+                    {" "}
+                    Cadastrar Produtos{" "}
+                  </MenuItem>
+                </Link>
+                <Link to="/formularioCategoria" className="cursor">
+                  <MenuItem onClick={handleClose}>
+                    {" "}
+                    Cadastrar Categorias{" "}
+                  </MenuItem>
+                </Link>
+              </Menu>
+            </Grid>
+            <Box paddingLeft={"20px"} width="100%">
+              <Link to="/home" className="logo-link">
+                <h3 className="h3">
+                  Energia <span className="span-viva">Viva</span>
+                </h3>
+              </Link>
             </Box>
-          </Grid>
-        </Grid>
-      </Toolbar>
-    </AppBar>
-  </Box>
+            <Grid
+              container
+              spacing={3}
+              display="flex"
+              justifyContent={"flex-end"}
+            >
+              <Grid item>
+                <Search className="search" onChange={handleFilter}>
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                    placeholder="Search…"
+                    inputProps={{ "aria-label": "search" }}
+                  />
+                </Search>
+              </Grid>
+              <Grid item>
+                <IconButton
+                  color="primary"
+                  aria-label="add to shopping cart"
+                  className="carButton"
+                >
+                  <AddShoppingCartIcon />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <Box mx={1} onClick={goLogout} className="cursor">
+                  <Typography variant="h6" color="inherit" className="icon-1">
+                    LOGOUT
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    );
   }
 
-  return (
-    <>
-        {navBarComponent}
-    </>
-  );
+  return <>{navBarComponent}</>;
 }
 
 export default Navbar;
