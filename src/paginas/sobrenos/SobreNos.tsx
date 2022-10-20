@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 
 function SobreNos() {
   let navigate = useNavigate();
@@ -32,17 +34,14 @@ function SobreNos() {
   }, [token])
   return (
     <>
-    <Grid container direction="row" justifyContent="center" alignItems="center" paddingY={4} className="fgradient">
-    <Grid alignItems="center" className="fgradient">
-    <Box paddingX={20}>
-      <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" style={{color: 'white'}}>Nossa equipe é composta por seis desenvolvedores formados na Generation Brasil. O e-commerce tem como base uma das ODS's (Objetivos de Desenvolimento Sustentável) da ONU. A ODS 7, que põe em pauta o acesso às diferentes fontes de energia e preservação ambiental. Conheça um pouco sobre nós:</Typography>
-    </Box>
-    </Grid>
-    </Grid>
-
-      <Grid container display="flex" justifyContent="flex-start">
+    <Grid container marginTop="50px" >
+    <Swiper pagination={{type: "progressbar",}} modules={[Pagination, Navigation]} className="mySwiper">
+        <SwiperSlide>
+        <Grid container display="flex" direction="row"
+              alignItems="center"
+              justifyContent="center">
         <div className="container">
-          <Grid item xs={12} sm={6} md={4} lg={2}>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
             <div className="card card0">
               <div className="border">
                 <h2>Laura De La Fuente</h2>
@@ -167,7 +166,8 @@ function SobreNos() {
           </Grid>
         </div>
       </Grid>
-      <Grid container>
+        </SwiperSlide>
+        <SwiperSlide><Grid container>
         <div className="container">
           <Grid item xs={12} sm={6} md={4} lg={2}>
             <div className="card card3">
@@ -294,7 +294,27 @@ function SobreNos() {
           </Grid>
         </div>
       </Grid>
-    </>
+      </SwiperSlide>
+      </Swiper>
+      </Grid>
+    <Grid container direction="row" justifyContent="center" alignItems="flex-start" paddingY={3} style={{backgroundColor: '#FDC921'}}>
+    <Grid sm={6} alignItems="flex-start" className="barra">
+    <Box paddingX={20}>
+      <Typography variant="h3" gutterBottom color="textPrimary" component="h4" style={{color: 'white'}}>QUEM SOMOS?</Typography>
+      <Typography variant="h6" gutterBottom color="textPrimary" component="h6" style={{color: 'white'}}>Nossa equipe é composta por seis desenvolvedores formados na Generation Brasil. O e-commerce tem como base uma das ODS's (Objetivos de Desenvolimento Sustentável) da ONU, a ODS 7</Typography>
+    </Box>
+    </Grid>
+    <Grid sm={6} alignItems="center" className="fgradient">
+    <Box paddingX={20}>
+    <Typography variant="h3" gutterBottom color="textPrimary" component="h3"  style={{color: 'white'}}>O QUE FAZEMOS?</Typography>
+      <Typography variant="h6" gutterBottom color="textPrimary" component="h6" style={{color: 'white'}}>A ODS 7 põe em pauta o acesso às diferentes fontes de energia e a preservação ambiental. Nós comercializamos painéis solares e parte da renda é convertida à distribuição de energia em comunidades sem acesso.</Typography>
+    </Box>
+    </Grid>
+    </Grid>
+
+      
+      
+      </>
   );
 }
 

@@ -153,11 +153,9 @@ function CadastroProdutos() {
       <form onSubmit={onSubmit}>
         <Typography
           variant="h3"
-          color="textSecondary"
           component="h1"
           align="center"
           className="formatacao"
- 
         > Formulário de cadastro de novo produto</Typography>
         <TextField
           value={produto.nomeProduto}
