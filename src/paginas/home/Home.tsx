@@ -179,10 +179,10 @@ function Home(props: any) {
                     <Typography color="textSecondary" gutterBottom>
                       R$ {produtos.preco}
                     </Typography>
-                    <Link to="/formuarioProduto">
+                    <Link to={`/formularioProduto/${produtos.id}`}>
                       <Button className="ok">Atualizar</Button>
                     </Link>
-                    <Link to="/deletarProduto">
+                    <Link to={`/deletarProduto/${produtos.id}`}>
                       <Button className="ok">deletar</Button>
                     </Link>
                   </CardContent>
