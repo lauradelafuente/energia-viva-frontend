@@ -179,8 +179,11 @@ function Home(props: any) {
                     <Typography color="textSecondary" gutterBottom>
                       R$ {produtos.preco}
                     </Typography>
-                    <Link to="/formularioProduto">
+                    <Link to="/formuarioProduto">
                       <Button className="ok">Atualizar</Button>
+                    </Link>
+                    <Link to="/deletarProduto">
+                      <Button className="ok">deletar</Button>
                     </Link>
                   </CardContent>
                 </Card>
