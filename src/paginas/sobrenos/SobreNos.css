@@ -1,4 +1,4 @@
-.container {
+.container2 {
   height: 70vh;
   width: 70vw;
   max-height: 800px;
@@ -134,11 +134,12 @@ h2 {
 }
 
 .barra {
-
   color: white;
 }
 
-#app { height: 100% }
+#app {
+  height: 100%;
+}
 html,
 body {
   position: relative;

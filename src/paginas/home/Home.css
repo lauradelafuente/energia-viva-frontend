@@ -149,7 +149,13 @@
   height: 100vh;
 }
 
-.carde {
+.container {
+  margin: 10px;
+  position: relative;
+  display: inline;
+}
+
+.card {
   position: relative;
   width: 320px;
   height: 480px;
@@ -158,7 +164,7 @@
   overflow: hidden;
 }
 
-.carde::before {
+.card::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -169,12 +175,12 @@
   transition: 0.5s;
 }
 
-.carde:hover::before {
+.card:hover::before {
   top: -70%;
   transform: skewY(390deg);
 }
 
-.carde::after {
+.card::after {
   content: "ENERGIA VIVA";
   position: absolute;
   bottom: 0;
@@ -184,7 +190,7 @@
   color: rgba(0, 0, 0, 0.1);
 }
 
-.carde .imgBox {
+.card .imgBox {
   position: relative;
   width: 100%;
   display: flex;
@@ -194,17 +200,17 @@
   z-index: 1;
 }
 /*
-.carde .imgBox img {
+.card .imgBox img {
     max-width: 100%;
     
     transition: .5s;
 }
 
-.carde:hover .imgBox img {
+.card:hover .imgBox img {
     max-width: 50%;
 }
 */
-.carde .contentBox {
+.card .contentBox {
   position: relative;
   padding: 20px;
   display: flex;
@@ -214,7 +220,7 @@
   z-index: 2;
 }
 
-.carde .contentBox h3 {
+.card .contentBox h3 {
   font-size: 18px;
   color: white;
   font-weight: 500;
@@ -223,7 +229,7 @@
   padding-right: 35px;
 }
 
-.carde .contentBox h1 {
+.card .contentBox h1 {
   font-size: 22px;
   color: white;
   font-weight: 500;
@@ -232,14 +238,14 @@
   padding-right: 35px;
 }
 
-.carde .contentBox .price {
+.card .contentBox .price {
   font-size: 24px;
   color: white;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-.carde .contentBox .buy {
+.card .contentBox .buy {
   position: relative;
   top: 100px;
   opacity: 0;
@@ -254,7 +260,7 @@
   transition: 0.5s;
 }
 
-.carde:hover .contentBox .buy {
+.card:hover .contentBox .buy {
   top: 0;
   opacity: 1;
 }

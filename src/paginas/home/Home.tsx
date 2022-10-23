@@ -136,7 +136,31 @@ function Home(props: any) {
             <SwiperSlide>
               <Box>
                 <div className="container">
-                  <div className="carde">
+                  <div className="card">
+                    <Grid>
+                      <div className="imgBox">
+                        <img src="https://i.imgur.com/Q7bhEgP.png"></img>
+                      </div>
+                    </Grid>
+                    <Grid item sm={6}>
+                      <div className="contentBox">
+                        <h1>Placa Solar Fotovoltaica 345W</h1>
+                        <h3>De: R$135,00</h3>
+                        <h1 style={{ color: "#FDD85D" }}>Por: R$120,00</h1>
+
+                        <a href="#" className="buy">
+                          Buy Now
+                        </a>
+                      </div>
+                    </Grid>
+                  </div>
+                </div>
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box>
+                <div className="container">
+                  <div className="card">
                     <Grid>
                       <div className="imgBox">
                         <img src="https://i.imgur.com/Q7bhEgP.png"></img>
