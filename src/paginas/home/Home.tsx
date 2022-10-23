@@ -134,55 +134,31 @@ function Home(props: any) {
             className="mySwiper"
           >
             <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem1"></Grid>
-              </Grid>
+              
+        <Box>
+      <div className="container">
+        <div className="card">
+<Grid>
+<div className="imgBox">
+<img src="https://i.imgur.com/Q7bhEgP.png"></img>
+</div>
+</Grid>
+<Grid item sm={6}>
+<div className="contentBox">
+  <h1>Placa Solar Fotovoltaica 345W</h1>
+  <h3>De: R$135,00</h3>
+  <h1 style={{color:'#FDD85D'}}>Por: R$120,00</h1>
+  
+  <a href="#" className="buy">Buy Now</a>
+</div>
+</Grid>
+
+</div>
+</div>
+      </Box>
+
             </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem2"></Grid>
-              </Grid>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem3"></Grid>
-              </Grid>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem4"></Grid>
-              </Grid>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem5"></Grid>
-              </Grid>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem6"></Grid>
-              </Grid>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem7"></Grid>
-              </Grid>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem8"></Grid>
-              </Grid>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem9"></Grid>
-              </Grid>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Grid container justifyContent={"center"}>
-                <Grid item className="imagem10"></Grid>
-              </Grid>
-            </SwiperSlide>
+          
           </Swiper>
         ) : (
           <div></div>

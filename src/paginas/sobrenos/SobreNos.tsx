@@ -300,7 +300,7 @@ function SobreNos() {
     <Grid container direction="row" justifyContent="center" alignItems="flex-start" paddingY={3} style={{backgroundColor: '#FDC921'}}>
     <Grid sm={6} alignItems="flex-start" className="barra">
     <Box paddingX={20}>
-      <Typography variant="h3" gutterBottom color="textPrimary" component="h4" style={{color: 'white'}}>QUEM SOMOS?</Typography>
+      <Typography variant="h3" gutterBottom color="textPrimary" component="h3" style={{color: 'white'}}>QUEM SOMOS?</Typography>
       <Typography variant="h6" gutterBottom color="textPrimary" component="h6" style={{color: 'white'}}>Nossa equipe é composta por seis desenvolvedores formados na Generation Brasil. O e-commerce tem como base uma das ODS's (Objetivos de Desenvolimento Sustentável) da ONU, a ODS 7</Typography>
     </Box>
     </Grid>
