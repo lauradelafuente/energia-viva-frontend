@@ -158,7 +158,7 @@
 .card {
   position: relative;
   width: 320px;
-  height: 480px;
+  height: 480px ;
   background: #6798c0 !important;
   border-radius: 20px;
   overflow: hidden;
@@ -190,7 +190,7 @@
   color: rgba(0, 0, 0, 0.1);
 }
 
-.card .imgBox {
+.card.imgBox {
   position: relative;
   width: 100%;
   display: flex;
@@ -210,7 +210,8 @@
     max-width: 50%;
 }
 */
-.card .contentBox {
+
+.card.contentBox {
   position: relative;
   padding: 20px;
   display: flex;
@@ -220,7 +221,7 @@
   z-index: 2;
 }
 
-.card .contentBox h3 {
+.card.contentBox h3 {
   font-size: 18px;
   color: white;
   font-weight: 500;
@@ -229,7 +230,7 @@
   padding-right: 35px;
 }
 
-.card .contentBox h1 {
+.card.contentBox h1 {
   font-size: 22px;
   color: white;
   font-weight: 500;
@@ -238,14 +239,14 @@
   padding-right: 35px;
 }
 
-.card .contentBox .price {
+.card.contentBox.price {
   font-size: 24px;
   color: white;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-.card .contentBox .buy {
+.card.contentBox.buy {
   position: relative;
   top: 100px;
   opacity: 0;
@@ -260,7 +261,7 @@
   transition: 0.5s;
 }
 
-.card:hover .contentBox .buy {
+.card:hover.contentBox.buy {
   top: 0;
   opacity: 1;
 }

@@ -37,11 +37,11 @@
 }
 
 .card0 {
-  background: url("https://i.imgur.com/iGT4uKO.png") center center no-repeat;
+  background: url("https://i.imgur.com/iGT4uKO.png") center center no-repeat !important;
 }
 
 .card0:hover {
-  background: url("https://i.imgur.com/iGT4uKO.png") left center no-repeat;
+  background: url("https://i.imgur.com/iGT4uKO.png") left center no-repeat !important;
 }
 
 .card0 h2 {
@@ -140,6 +140,7 @@ h2 {
 #app {
   height: 100%;
 }
+
 html,
 body {
   position: relative;
@@ -165,7 +166,7 @@ body {
   font-size: 18px;
   background: #fff;
 
-  /* Center slide text vertically */
+  
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;

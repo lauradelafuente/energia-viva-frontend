@@ -137,7 +137,7 @@ function Home(props: any) {
               <Box>
                 <div className="container">
                   <div className="card">
-                    <Grid>
+                    <Grid item sm={6}>
                       <div className="imgBox">
                         <img src="https://i.imgur.com/Q7bhEgP.png"></img>
                       </div>
