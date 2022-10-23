@@ -149,32 +149,32 @@
   height: 100vh;
 }
 
-.card {
+.carde {
   position: relative;
   width: 320px;
   height: 480px;
-  background: #6798C0 !important;
+  background: #6798c0 !important;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.card::before {
+.carde::before {
   content: "";
   position: absolute;
   top: -50%;
   width: 100%;
   height: 100%;
-  background: #FDC921 !important;
+  background: #fdc921 !important;
   transform: skewY(345deg);
   transition: 0.5s;
 }
 
-.card:hover::before {
+.carde:hover::before {
   top: -70%;
   transform: skewY(390deg);
 }
 
-.card::after {
+.carde::after {
   content: "ENERGIA VIVA";
   position: absolute;
   bottom: 0;
@@ -184,7 +184,7 @@
   color: rgba(0, 0, 0, 0.1);
 }
 
-.card .imgBox {
+.carde .imgBox {
   position: relative;
   width: 100%;
   display: flex;
@@ -194,17 +194,17 @@
   z-index: 1;
 }
 /*
-.card .imgBox img {
+.carde .imgBox img {
     max-width: 100%;
     
     transition: .5s;
 }
 
-.card:hover .imgBox img {
+.carde:hover .imgBox img {
     max-width: 50%;
 }
 */
-.card .contentBox {
+.carde .contentBox {
   position: relative;
   padding: 20px;
   display: flex;
@@ -214,7 +214,7 @@
   z-index: 2;
 }
 
-.card .contentBox h3 {
+.carde .contentBox h3 {
   font-size: 18px;
   color: white;
   font-weight: 500;
@@ -223,7 +223,7 @@
   padding-right: 35px;
 }
 
-.card .contentBox h1 {
+.carde .contentBox h1 {
   font-size: 22px;
   color: white;
   font-weight: 500;
@@ -232,14 +232,14 @@
   padding-right: 35px;
 }
 
-.card .contentBox .price {
+.carde .contentBox .price {
   font-size: 24px;
   color: white;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-.card .contentBox .buy {
+.carde .contentBox .buy {
   position: relative;
   top: 100px;
   opacity: 0;
@@ -247,14 +247,14 @@
   margin-top: 15px;
   color: white;
   text-decoration: none;
-  background: #FDC921 !important;
+  background: #fdc921 !important;
   border-radius: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: 0.5s;
 }
 
-.card:hover .contentBox .buy {
+.carde:hover .contentBox .buy {
   top: 0;
   opacity: 1;
 }
@@ -263,4 +263,3 @@
   height: 300px;
   width: auto;
 }
-
