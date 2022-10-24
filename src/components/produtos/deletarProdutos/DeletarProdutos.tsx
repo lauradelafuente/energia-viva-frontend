@@ -55,7 +55,7 @@ function DeletarProdutos() {
   }
 
   function sim() {
-    navigate("/produtos");
+    navigate("/home");
     deleteId(`/produto/${id}`, {
       headers: {
         Authorization: token,
@@ -74,7 +74,7 @@ function DeletarProdutos() {
   }
 
   function nao() {
-    navigate("/produtos");
+    navigate("/home");
   }
   return (
     <>

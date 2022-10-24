@@ -37,6 +37,7 @@ function SobreNos() {
       <Grid container marginTop="50px">
         <Swiper
           pagination={{ type: "progressbar" }}
+          navigation={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >

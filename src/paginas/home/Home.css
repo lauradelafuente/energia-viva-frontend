@@ -49,10 +49,10 @@
 .imagem1 {
   display: flex;
   justify-content: center;
-  background-image: url("../../assets/imgs/1.jpg");
+  background-image: url("https://institucional-and-info-production.s3.us-east-2.amazonaws.com/images/bdfdb656-1973-4a1c-a526-f997c1c0131b/tudo-sobre-a-eficiencia-do-painel-solar.jpg");
   background-repeat: no-repeat;
-  width: 300px;
-  height: 400px;
+  width: 70vw;
+  height: 70vh;
 }
 .imagem2 {
   display: flex;
@@ -158,7 +158,7 @@
 .card {
   position: relative;
   width: 320px;
-  height: 480px ;
+  height: 480px;
   background: #6798c0 !important;
   border-radius: 20px;
   overflow: hidden;

@@ -145,7 +145,7 @@ function CadastroProdutos() {
   }
 
   function back() {
-    navigate("/produtos");
+    navigate("/home");
   }
   return (
     <Grid container className="image">

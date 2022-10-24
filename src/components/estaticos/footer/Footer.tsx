@@ -33,13 +33,13 @@ function Footer() {
 
   <p className="footer-links">
     <a href="#">Home</a>
-    ·
+    <p></p>
     <a href="#">Produtos</a>
-    ·
+    <p></p>
     <a href="#">Sobre nós</a>
-    ·
+    <p></p>
     <a href="#">Perguntas frequentes</a>
-    ·
+    <p></p>
     <a href="#">Contatos</a>
   </p>
 
