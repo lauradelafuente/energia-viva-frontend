@@ -201,41 +201,200 @@ function Home(props: any) {
             className="mySwiper"
           >
             <SwiperSlide>
-            <Grid container alignItems='center' justifyContent="space-between">
-            <Box sx={{ maxWidth: 345 }} className='promo'>
-      <Box
-        className='imgBox'
-      > </Box>
-      <Box className='contentBox'>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </Box>
-      <Box>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </Box>
-      </Box>
-      </Grid>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box>
+                  <div className="container">
+                    <div className="promo">
+                      <div className="imgBox">
+                        <img
+                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div className="contentBox">
+                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <br />
+                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+
+                        <h3>POR APENAS</h3>
+
+                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <a href="#" className="buy">
+                          Comprar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Box>
+              </Grid>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box>
+                  <div className="container">
+                    <div className="promo">
+                      <div className="imgBox">
+                        <img
+                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div className="contentBox">
+                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <br />
+                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+
+                        <h3>POR APENAS</h3>
+
+                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <a href="#" className="buy">
+                          Comprar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Box>
+              </Grid>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box>
+                  <div className="container">
+                    <div className="promo">
+                      <div className="imgBox">
+                        <img
+                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div className="contentBox">
+                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <br />
+                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+
+                        <h3>POR APENAS</h3>
+
+                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <a href="#" className="buy">
+                          Comprar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Box>
+              </Grid>
             </SwiperSlide>
             <SwiperSlide>
-            <div className="promo">
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box>
+                  <div className="container">
+                    <div className="promo">
+                      <div className="imgBox">
+                        <img
+                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          alt=""
+                        />
+                      </div>
 
-<div className="imgBox">
-  <img src='https://i.imgur.com/O8SKVfT.png'> </img>
-</div>
+                      <div className="contentBox">
+                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <br />
+                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
 
-<div className="contentBox">
-  <h3>Mouse Corsair M65</h3>
-  <h2 className="price">61.<small>98</small> €</h2>
-  <a href="#" className="buy">Buy Now</a>
-</div>
+                        <h3>POR APENAS</h3>
 
-</div>
+                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <a href="#" className="buy">
+                          Comprar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Box>
+              </Grid>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box>
+                  <div className="container">
+                    <div className="promo">
+                      <div className="imgBox">
+                        <img
+                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div className="contentBox">
+                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <br />
+                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+
+                        <h3>POR APENAS</h3>
+
+                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <a href="#" className="buy">
+                          Comprar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Box>
+              </Grid>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box>
+                  <div className="container">
+                    <div className="promo">
+                      <div className="imgBox">
+                        <img
+                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div className="contentBox">
+                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <br />
+                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+
+                        <h3>POR APENAS</h3>
+
+                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <a href="#" className="buy">
+                          Comprar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Box>
+              </Grid>
             </SwiperSlide>
           </Swiper>
         ) : (

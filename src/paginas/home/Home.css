@@ -17,7 +17,7 @@
 
 .swiper {
   width: 100%;
-  height: 400px;
+  height: 70%;
 }
 
 .swiper-slide {
@@ -68,28 +68,22 @@
   height: 100vh;
 }
 
-.container {
-  margin: 10px;
-  position: relative;
-  display: inline;
-}
-
 .promo {
   position: relative !important;
   width: 320px !important;
   height: 480px !important;
-  background: #191919 !important;
+  background: #6798c0 !important;
   border-radius: 20px !important;
   overflow: hidden !important;
 }
 
 .promo::before {
   content: "" !important;
-  position: absolute !important;
+  position: absolute;
   top: -50% !important;
   width: 100% !important;
   height: 100% !important;
-  background: #ffce00 !important;
+  background: #fdc921 !important;
   transform: skewY(345deg) !important;
   transition: 0.5s !important;
 }
@@ -113,23 +107,22 @@
   position: relative !important;
   width: 100% !important;
   display: flex !important;
-  justify-content: center !important;
+  justify-content: left !important;
   align-items: center !important;
   padding-top: 20px !important;
-  z-index: 1 !important;
+  z-index: 1000 !important;
 }
-/*
+
 .promo .imgBox img {
-    max-width: 100%;
-    
-    transition: .5s;
+  max-width: 80%;
+
+  transition: 0.5s;
 }
 
 .promo:hover .imgBox img {
-    max-width: 50%;
-      
+  max-width: 50%;
 }
-*/
+
 .promo .contentBox {
   position: relative !important;
   padding: 20px !important;
@@ -141,19 +134,26 @@
 }
 
 .promo .contentBox h3 {
-  font-size: 18px !important;
-  color: white !important;
-  font-weight: 500 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.promo .contentBox .price {
+.promo .contentBox h2 {
   font-size: 24px !important;
   color: white !important;
   font-weight: 700 !important;
   letter-spacing: 1px !important;
 }
+
+/* .promo .contentBox .price {
+  font-size: 24px !important;
+  color: white !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+} */
 
 .promo .contentBox .buy {
   position: relative !important;
@@ -161,7 +161,7 @@
   opacity: 0;
   padding: 10px 30px !important;
   margin-top: 15px !important;
-  color: #000000 !important;
+  color: #fff !important;
   text-decoration: none !important;
   background: #ffce00 !important;
   border-radius: 30px !important;
