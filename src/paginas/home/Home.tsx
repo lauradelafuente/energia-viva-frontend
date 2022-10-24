@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Card,
+  CardActions,
   CardContent,
   CardMedia,
   Grid,
@@ -200,10 +201,41 @@ function Home(props: any) {
             className="mySwiper"
           >
             <SwiperSlide>
-              <Box className="imagem1"></Box>
+            <Grid container alignItems='center' justifyContent="space-between">
+            <Box sx={{ maxWidth: 345 }} className='promo'>
+      <Box
+        className='imgBox'
+      > </Box>
+      <Box className='contentBox'>
+        <Typography gutterBottom variant="h5" component="div">
+          Lizard
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
+      </Box>
+      <Box>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </Box>
+      </Box>
+      </Grid>
             </SwiperSlide>
             <SwiperSlide>
-              <Box className="imagem1"></Box>
+            <div className="promo">
+
+<div className="imgBox">
+  <img src='https://i.imgur.com/O8SKVfT.png'> </img>
+</div>
+
+<div className="contentBox">
+  <h3>Mouse Corsair M65</h3>
+  <h2 className="price">61.<small>98</small> €</h2>
+  <a href="#" className="buy">Buy Now</a>
+</div>
+
+</div>
             </SwiperSlide>
           </Swiper>
         ) : (
