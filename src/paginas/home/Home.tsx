@@ -84,6 +84,72 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     marginTop: 24,
     textTransform: "initial",
   },
+
+  card: {
+    position: "relative",
+    width: 320,
+    height: 480,
+    background: "#6798c0",
+    borderRadius: 20,
+    overflow: "hidden",
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      top: "-50%",
+      width: "100%",
+      height: "100%",
+      background: "#fdc921",
+      transform: "skewY(345deg)",
+      transition: "0.5s",
+    },
+    "&:hover::before": {
+      top: "-70%",
+      transform: "skewY(390deg)",
+    },
+    "&:after": {
+      content: '"ENERGIA VIVA"',
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      fontWeight: 600,
+      fontSize: "2.4em",
+      color: "rgba(0, 0, 0, 0.1)",
+    },
+  },
+  imgBox: {
+    position: "relative",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignIitems: "center",
+    paddingTop: 20,
+    zIndex: 1,
+  },
+  contentBox: {
+    position: "relative",
+    padding: "20px",
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    flexDirection: "column",
+    zIndex: 2,
+  },
+  h3: {
+    fontSize: 18,
+    color: "white",
+    fontWeight: 500,
+    textTransform: "uppercase",
+    letterSpacing: 1,
+    paddingRight: 35,
+  },
+  h1: {
+    fontSize: 22,
+    color: "white",
+    fontWeight: 500,
+    textTransform: "uppercase",
+    letterSpacing: 1,
+    paddingRight: 35,
+  },
 }));
 
 function Home(props: any) {
@@ -136,17 +202,21 @@ function Home(props: any) {
             <SwiperSlide>
               <Box>
                 <div className="container">
-                  <div className="card">
+                  <div className={styles.card}>
                     <Grid item sm={6}>
-                      <div className="imgBox">
+                      <div className={styles.imgBox}>
                         <img src="https://i.imgur.com/Q7bhEgP.png"></img>
                       </div>
                     </Grid>
                     <Grid item sm={6}>
-                      <div className="contentBox">
-                        <h1>Placa Solar Fotovoltaica 345W</h1>
-                        <h3>De: R$135,00</h3>
-                        <h1 style={{ color: "#FDD85D" }}>Por: R$120,00</h1>
+                      <div className={styles.contentBox}>
+                        <h1 className={styles.h1}>
+                          Placa Solar Fotovoltaica 345W
+                        </h1>
+                        <h3 className={styles.h3}>De: R$135,00</h3>
+                        <h1 style={{ color: "#FDD85D" }} className={styles.h1}>
+                          Por: R$120,00
+                        </h1>
 
                         <a href="#" className="buy">
                           Buy Now

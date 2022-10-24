@@ -246,7 +246,7 @@
   letter-spacing: 1px;
 }
 
-.card.contentBox.buy {
+.buy {
   position: relative;
   top: 100px;
   opacity: 0;
