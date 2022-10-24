@@ -31,7 +31,8 @@ import UpdateOutlinedIcon from "@mui/icons-material/UpdateOutlined";
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
     // margin: "auto",
-    borderRadius: spacing(2), // 16px
+    borderRadius: spacing(2),
+    // 16px
     transition: "0.3s",
     boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
     position: "relative",
@@ -84,72 +85,6 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   cta: {
     marginTop: 24,
     textTransform: "initial",
-  },
-
-  card: {
-    position: "relative",
-    width: 320,
-    height: 480,
-    background: "#6798c0",
-    borderRadius: 20,
-    overflow: "hidden",
-    "&::before": {
-      content: '""',
-      position: "absolute",
-      top: "-50%",
-      width: "100%",
-      height: "100%",
-      background: "#fdc921",
-      transform: "skewY(345deg)",
-      transition: "0.5s",
-    },
-    "&:hover::before": {
-      top: "-70%",
-      transform: "skewY(390deg)",
-    },
-    "&:after": {
-      content: '"ENERGIA VIVA"',
-      position: "absolute",
-      bottom: 0,
-      left: 0,
-      fontWeight: 600,
-      fontSize: "2.4em",
-      color: "rgba(0, 0, 0, 0.1)",
-    },
-  },
-  imgBox: {
-    position: "relative",
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignIitems: "center",
-    paddingTop: 20,
-    zIndex: 1,
-  },
-  contentBox: {
-    position: "relative",
-    padding: "20px",
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    flexDirection: "column",
-    zIndex: 2,
-  },
-  h3: {
-    fontSize: 18,
-    color: "white",
-    fontWeight: 500,
-    textTransform: "uppercase",
-    letterSpacing: 1,
-    paddingRight: 35,
-  },
-  h1: {
-    fontSize: 22,
-    color: "white",
-    fontWeight: 500,
-    textTransform: "uppercase",
-    letterSpacing: 1,
-    paddingRight: 35,
   },
 }));
 
@@ -212,19 +147,19 @@ function Home(props: any) {
                     <div className="promo">
                       <div className="imgBox">
                         <img
-                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          src="https://i.imgur.com/lxAJKXW.png"
                           alt=""
                         />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <h3>PROMOÇÃO Bateria Solar de Lítio 860Wh</h3>
                         <br />
-                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+                        <h5>DE<span style={{ color: "red" }}> R$ 4.999,00 </span></h5>
 
-                        <h3>POR APENAS</h3>
+                        <h3>POR:</h3>
 
-                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <h4>R$ 3.699,00</h4>
                         <a href="#" className="buy">
                           Comprar
                         </a>
@@ -244,19 +179,19 @@ function Home(props: any) {
                     <div className="promo">
                       <div className="imgBox">
                         <img
-                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          src="https://i.imgur.com/j99VONo.png"
                           alt=""
                         />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <h3>PROMOÇÃO Painel Solar Fotovoltaico 155W</h3>
                         <br />
-                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+                        <h5>DE<span style={{ color: "red" }}> R$ 450,00 </span></h5>
 
-                        <h3>POR APENAS</h3>
+                        <h3>POR:</h3>
 
-                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <h4>R$ 399,00</h4>
                         <a href="#" className="buy">
                           Comprar
                         </a>
@@ -276,19 +211,19 @@ function Home(props: any) {
                     <div className="promo">
                       <div className="imgBox">
                         <img
-                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          src="https://i.imgur.com/p4U5QYd.png"
                           alt=""
                         />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <h3>PROMOÇÃO Kit Energia Solar Off Grid c/ Bateria 155Wp</h3>
                         <br />
-                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+                        <h5>DE<span style={{ color: "red" }}> R$ 6.000,00</span></h5>
 
-                        <h3>POR APENAS</h3>
+                        <h3>POR:</h3>
 
-                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <h4>R$ 5.699,00</h4>
                         <a href="#" className="buy">
                           Comprar
                         </a>
@@ -310,19 +245,19 @@ function Home(props: any) {
                     <div className="promo">
                       <div className="imgBox">
                         <img
-                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          src="https://i.imgur.com/fwVHMEd.png"
                           alt=""
                         />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <h3>PROMOÇÃO Bomba Solar 12V Singflo FL-40</h3>
                         <br />
-                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+                        <h5>DE<span style={{ color: "red" }}> R$ 599,00</span></h5>
 
-                        <h3>POR APENAS</h3>
+                        <h3>POR:</h3>
 
-                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <h4>R$ 489,90</h4>
                         <a href="#" className="buy">
                           Comprar
                         </a>
@@ -342,19 +277,19 @@ function Home(props: any) {
                     <div className="promo">
                       <div className="imgBox">
                         <img
-                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          src="https://i.imgur.com/397XZEW.png"
                           alt=""
                         />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <h3>PROMOÇÃO Bomba Solar PRO Samking 1HP 3" 3SPN2-9P</h3>
                         <br />
-                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+                        <h5>DE<span style={{ color: "red" }}> R$ 3.000,00</span></h5>
 
                         <h3>POR APENAS</h3>
 
-                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <h4>R$ 2.750,00</h4>
                         <a href="#" className="buy">
                           Comprar
                         </a>
@@ -374,19 +309,19 @@ function Home(props: any) {
                     <div className="promo">
                       <div className="imgBox">
                         <img
-                          src="https://www.neosolar.com.br/loja/media/wysiwyg/Banners/Banner-Categorias---Pain_is-Solares_01.jpg"
+                          src="https://i.imgur.com/ZU2MtWk.png"
                           alt=""
                         />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOCAO PAINEL SOLAR</h3>
+                        <h3>PROMOÇÃO Kit Energia Solar Fotovoltaica 20Wp 24Vcc</h3>
                         <br />
-                        <h3 style={{ color: "red" }}>DE R$ 1.200,00</h3>
+                        <h5>DE<span style={{ color: "red" }}> R$ 291,00</span></h5>
 
                         <h3>POR APENAS</h3>
 
-                        <h3 style={{ color: "green" }}>R$ 1.000,00</h3>
+                        <h4>R$ 189,90</h4>
                         <a href="#" className="buy">
                           Comprar
                         </a>
@@ -401,6 +336,13 @@ function Home(props: any) {
           <div></div>
         )}
       </Grid>
+
+        <Grid container direction="row" justifyContent="center" alignItems="center">
+    
+        <h1>NOSSOS PRODUTOS:</h1>
+
+      </Grid>
+
       {console.log(check)}
       <Grid>
         {produtos
