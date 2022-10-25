@@ -178,7 +178,7 @@ function Navbar(props: any) {
             <Box paddingLeft={"20px"} width="100%">
               <Link to="/home" className="logo-link">
                 <h3 className="h3">
-                  Energia <span className="span-viva">Viva</span>
+                  Energia <span className="span-viva">VIVA</span>
                 </h3>
               </Link>
             </Box>
@@ -211,7 +211,7 @@ function Navbar(props: any) {
               <Grid item>
                 <Box mx={1} onClick={goLogout} className="cursor">
                   <Typography variant="h6" color="inherit" className="icon-1">
-                    LOGOUT
+                    SAIR
                   </Typography>
                 </Box>
               </Grid>

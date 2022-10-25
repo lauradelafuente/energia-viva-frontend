@@ -15,6 +15,7 @@ import { addToken } from "../../../store/tokens/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import CardMedia from "@material-ui/core/CardMedia";
 
 function DeletarProdutos() {
   let navigate = useNavigate();
@@ -80,6 +81,12 @@ function DeletarProdutos() {
     <>
       <Box m={2}>
         <Card variant="outlined">
+          <img
+            src={`${produto?.potencia}`}
+            alt="imagem do painel solar"
+            className="imgDelete"
+          />
+
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
@@ -90,15 +97,15 @@ function DeletarProdutos() {
               </Typography>
             </Box>
           </CardContent>
+
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
               <Box mx={2}>
                 <Button
                   onClick={sim}
                   variant="contained"
-                  className="marginLeft"
                   size="large"
-                  color="primary"
+                  style={{ backgroundColor: "#6798c0" }}
                 >
                   Sim
                 </Button>
@@ -107,8 +114,8 @@ function DeletarProdutos() {
                 <Button
                   onClick={nao}
                   variant="contained"
+                  style={{ backgroundColor: "#fdc921" }}
                   size="large"
-                  color="secondary"
                 >
                   Não
                 </Button>

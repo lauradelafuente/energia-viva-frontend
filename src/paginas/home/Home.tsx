@@ -95,6 +95,9 @@ function Home(props: any) {
   );
   let filter = props.inputText;
   let check: boolean = true;
+
+  const [selectProducts, setSelectProducts] = useState([]);
+
   useEffect(() => {
     if (token == "") {
       alert("Você precisa estar logado");
@@ -146,16 +149,15 @@ function Home(props: any) {
                   <div className="container">
                     <div className="promo">
                       <div className="imgBox">
-                        <img
-                          src="https://i.imgur.com/lxAJKXW.png"
-                          alt=""
-                        />
+                        <img src="https://i.imgur.com/lxAJKXW.png" alt="" />
                       </div>
 
                       <div className="contentBox">
                         <h3>PROMOÇÃO Bateria Solar de Lítio 860Wh</h3>
                         <br />
-                        <h5>DE<span style={{ color: "red" }}> R$ 4.999,00 </span></h5>
+                        <h5>
+                          DE<span style={{ color: "red" }}> R$ 4.999,00 </span>
+                        </h5>
 
                         <h3>POR:</h3>
 
@@ -178,16 +180,15 @@ function Home(props: any) {
                   <div className="container">
                     <div className="promo">
                       <div className="imgBox">
-                        <img
-                          src="https://i.imgur.com/j99VONo.png"
-                          alt=""
-                        />
+                        <img src="https://i.imgur.com/j99VONo.png" alt="" />
                       </div>
 
                       <div className="contentBox">
                         <h3>PROMOÇÃO Painel Solar Fotovoltaico 155W</h3>
                         <br />
-                        <h5>DE<span style={{ color: "red" }}> R$ 450,00 </span></h5>
+                        <h5>
+                          DE<span style={{ color: "red" }}> R$ 450,00 </span>
+                        </h5>
 
                         <h3>POR:</h3>
 
@@ -210,16 +211,17 @@ function Home(props: any) {
                   <div className="container">
                     <div className="promo">
                       <div className="imgBox">
-                        <img
-                          src="https://i.imgur.com/p4U5QYd.png"
-                          alt=""
-                        />
+                        <img src="https://i.imgur.com/p4U5QYd.png" alt="" />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOÇÃO Kit Energia Solar Off Grid c/ Bateria 155Wp</h3>
+                        <h3>
+                          PROMOÇÃO Kit Energia Solar Off Grid c/ Bateria 155Wp
+                        </h3>
                         <br />
-                        <h5>DE<span style={{ color: "red" }}> R$ 6.000,00</span></h5>
+                        <h5>
+                          DE<span style={{ color: "red" }}> R$ 6.000,00</span>
+                        </h5>
 
                         <h3>POR:</h3>
 
@@ -244,16 +246,15 @@ function Home(props: any) {
                   <div className="container">
                     <div className="promo">
                       <div className="imgBox">
-                        <img
-                          src="https://i.imgur.com/fwVHMEd.png"
-                          alt=""
-                        />
+                        <img src="https://i.imgur.com/fwVHMEd.png" alt="" />
                       </div>
 
                       <div className="contentBox">
                         <h3>PROMOÇÃO Bomba Solar 12V Singflo FL-40</h3>
                         <br />
-                        <h5>DE<span style={{ color: "red" }}> R$ 599,00</span></h5>
+                        <h5>
+                          DE<span style={{ color: "red" }}> R$ 599,00</span>
+                        </h5>
 
                         <h3>POR:</h3>
 
@@ -276,16 +277,17 @@ function Home(props: any) {
                   <div className="container">
                     <div className="promo">
                       <div className="imgBox">
-                        <img
-                          src="https://i.imgur.com/397XZEW.png"
-                          alt=""
-                        />
+                        <img src="https://i.imgur.com/397XZEW.png" alt="" />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOÇÃO Bomba Solar PRO Samking 1HP 3" 3SPN2-9P</h3>
+                        <h3>
+                          PROMOÇÃO Bomba Solar PRO Samking 1HP 3" 3SPN2-9P
+                        </h3>
                         <br />
-                        <h5>DE<span style={{ color: "red" }}> R$ 3.000,00</span></h5>
+                        <h5>
+                          DE<span style={{ color: "red" }}> R$ 3.000,00</span>
+                        </h5>
 
                         <h3>POR APENAS</h3>
 
@@ -308,16 +310,17 @@ function Home(props: any) {
                   <div className="container">
                     <div className="promo">
                       <div className="imgBox">
-                        <img
-                          src="https://i.imgur.com/ZU2MtWk.png"
-                          alt=""
-                        />
+                        <img src="https://i.imgur.com/ZU2MtWk.png" alt="" />
                       </div>
 
                       <div className="contentBox">
-                        <h3>PROMOÇÃO Kit Energia Solar Fotovoltaica 20Wp 24Vcc</h3>
+                        <h3>
+                          PROMOÇÃO Kit Energia Solar Fotovoltaica 20Wp 24Vcc
+                        </h3>
                         <br />
-                        <h5>DE<span style={{ color: "red" }}> R$ 291,00</span></h5>
+                        <h5>
+                          DE<span style={{ color: "red" }}> R$ 291,00</span>
+                        </h5>
 
                         <h3>POR APENAS</h3>
 
@@ -337,13 +340,15 @@ function Home(props: any) {
         )}
       </Grid>
 
-        <Grid container direction="row" justifyContent="center" alignItems="center">
-    
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
         <h1>NOSSOS PRODUTOS:</h1>
-
       </Grid>
 
-      {console.log(check)}
       <Grid>
         {produtos
           .filter((produtos) => {
