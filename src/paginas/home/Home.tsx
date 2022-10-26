@@ -27,6 +27,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import Stack from "@mui/material/Stack";
 import UpdateOutlinedIcon from "@mui/icons-material/UpdateOutlined";
+import { toast } from "react-toastify";
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -100,7 +101,16 @@ function Home(props: any) {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado");
+      toast.error("Você precisa estar logado.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
       navigate("/login");
     }
   }, [token]);
@@ -345,6 +355,7 @@ function Home(props: any) {
         direction="row"
         justifyContent="center"
         alignItems="center"
+        className="nossos"
       >
         <h1>NOSSOS PRODUTOS:</h1>
       </Grid>

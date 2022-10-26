@@ -185,3 +185,10 @@
   height: 300px !important;
   width: auto !important;
 }
+
+.nossos {
+  margin-top: 40px;
+  background-color: #FDC921;
+  color: white;
+  padding: 40px;
+}

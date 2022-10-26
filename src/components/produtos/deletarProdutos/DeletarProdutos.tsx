@@ -81,12 +81,6 @@ function DeletarProdutos() {
     <>
       <Box m={2}>
         <Card variant="outlined">
-          <img
-            src={`${produto?.potencia}`}
-            alt="imagem do painel solar"
-            className="imgDelete"
-          />
-
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
